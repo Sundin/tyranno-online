@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-    <Header msg="Armory"/>
+  <div class="bg">
+    <div id="app">
+      <Header msg="Armory"/>
+    </div>
   </div>
 </template>
 
@@ -16,12 +18,30 @@ export default {
 </script>
 
 <style>
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("../assets/background.jpg");
+
+  height: 100%;
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
