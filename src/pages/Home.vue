@@ -1,6 +1,6 @@
 <template>
   <main-layout>
-    <p>Hyper Speed Metal from Sweden!</p>
+    <p>Hyper Speed Metal from Space!</p>
   </main-layout>
 </template>
 

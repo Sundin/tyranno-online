@@ -5,6 +5,9 @@
     <p>2019-07-12: Metal Magic Festival, Fredericia, Denmark</p>
     <h1>Past Gigs</h1>
     <p>2019-05-04: Truckstop Alaska, Gothenburg, Sweden (cancelled Agent Steel gig)</p>
+    <p>2019-03-10: Bambi Galore, Hamburg, Germany</p>
+    <p>2019-03-09: Club Ragnarok, Bree, Belgium</p>
+    <p>2019-03-08: MTS, Oldenburg, Germany</p>
     <p>2018-10-20: Plan B, Malmö, Sweden</p>
     <p>2018-07-28: Truckstop Alaska, Gothenburg, Sweden (releaseparty for The Search)</p>
     <p>2018-06-02: Muskelrock, Blädinge, Sweden</p>
