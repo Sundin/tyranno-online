@@ -1,6 +1,8 @@
 <template>
   <div class="header">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <v-link href="/">
+      <img alt="Vue logo" src="../assets/logo.png">
+    </v-link>
     <ul>
       <li>
         <v-link href="/">Home</v-link>
