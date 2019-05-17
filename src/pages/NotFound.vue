@@ -1,26 +1,14 @@
 <template>
-  <div id="app">
-    <Header msg="Not Found"/>
-  </div>
+  <main-layout>
+    <p>Error 404: This page has been lost to the warp...</p>
+  </main-layout>
 </template>
 
 <script>
-import Header from "../components/Header.vue";
-
+import MainLayout from "../layouts/Main.vue";
 export default {
-  name: "app",
   components: {
-    Header
+    MainLayout
   }
 };
 </script>
-
-<style scoped>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-</style>

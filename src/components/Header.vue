@@ -8,7 +8,6 @@
         <v-link href="/about">About</v-link>
       </li>
     </ul>
-    <p>Hyper Speed Metal</p>
   </div>
 </template>
 

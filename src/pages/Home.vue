@@ -1,47 +1,14 @@
 <template>
-  <div class="bg">
-    <div id="app">
-      <Header msg="Armory"/>
-    </div>
-  </div>
+  <main-layout>
+    <p>Hyper Speed Metal from Sweden!</p>
+  </main-layout>
 </template>
 
 <script>
-import Header from "../components/Header.vue";
-
+import MainLayout from "../layouts/Main.vue";
 export default {
-  name: "app",
   components: {
-    Header
+    MainLayout
   }
 };
 </script>
-
-<style>
-body,
-html {
-  height: 100%;
-  width: 100%;
-}
-
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-.bg {
-  /* The image used */
-  background-image: url("../assets/background.jpg");
-
-  height: 100%;
-  width: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-</style>
