@@ -8,6 +8,7 @@
         <v-link href="/">Home</v-link>
         <v-link href="/tour">Tour</v-link>
         <v-link href="/merch">Merch</v-link>
+        <v-link href="/fanclub">Fanclub</v-link>
         <v-link href="/about">About</v-link>
       </li>
     </ul>
