@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <img alt="Vue logo" src="../assets/logo.png">
     <h1>{{ msg }}</h1>
     <p>Hyper Speed Metal</p>
   </div>
@@ -7,10 +8,10 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "Header",
   props: {
-    msg: String,
-  },
+    msg: String
+  }
 };
 </script>
 
