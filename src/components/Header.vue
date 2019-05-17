@@ -1,10 +1,11 @@
 <template>
-  <div class="hello">
+  <div class="header">
     <img alt="Vue logo" src="../assets/logo.png">
-    <h1>{{ msg }}</h1>
     <ul>
       <li>
         <v-link href="/">Home</v-link>
+        <v-link href="/tour">Tour</v-link>
+        <v-link href="/merch">Merch</v-link>
         <v-link href="/about">About</v-link>
       </li>
     </ul>
@@ -16,9 +17,6 @@ import VLink from "./VLink.vue";
 
 export default {
   name: "Header",
-  props: {
-    msg: String
-  },
   components: {
     VLink
   }
@@ -27,9 +25,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello {
-  /* margin-top: 60px; */
-}
 h3 {
   margin: 40px 0 0;
 }

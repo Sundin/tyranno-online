@@ -1,7 +1,7 @@
 <template>
   <div class="bg">
     <div id="app">
-      <Header msg="Armory"/>
+      <Header/>
       <slot id="content"></slot>
     </div>
   </div>
