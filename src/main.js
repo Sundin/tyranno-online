@@ -1,14 +1,9 @@
 import Vue from 'vue';
-import Home from './pages/Home.vue';
-import About from './pages/About.vue';
+
+import routes from './routes';
 import NotFound from './pages/NotFound.vue';
 
 Vue.config.productionTip = false;
-
-const routes = {
-  '/': Home,
-  '/about': About,
-};
 
 const vm = new Vue({
   data: {
