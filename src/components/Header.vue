@@ -25,9 +25,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
 ul {
   list-style-type: none;
   padding: 0;
@@ -37,7 +34,12 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
-  padding: 0 6px;
+  color: #0ebe08;
+  padding: 0 20px;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 30px;
+}
+a.active {
+  color: #be3c08;
 }
 </style>

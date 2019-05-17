@@ -26,23 +26,31 @@ html {
 }
 
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #0ebe08;
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
 }
 
 .bg {
-  /* The image used */
   background-image: url("../assets/background.jpg");
 
   height: 100%;
   width: 100%;
 
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+a {
+  color: #be3c08;
+}
+a.active {
+  color: #be3c08;
 }
 </style>
