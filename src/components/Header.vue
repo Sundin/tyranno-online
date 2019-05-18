@@ -49,4 +49,7 @@ export default {
 .navbar a.active {
   color: var(--link-color);
 }
+.navbar a:hover {
+  color: var(--hover-color);
+}
 </style>
