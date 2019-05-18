@@ -1,6 +1,9 @@
 <template>
   <div class="gig-entry">
-    <p>{{item.date}}: {{item.location}} {{item.comment}}</p>
+    <p>
+      {{item.date}}: {{item.location}}
+      <template v-if="item.comment">({{item.comment}})</template>
+    </p>
   </div>
 </template>
 
