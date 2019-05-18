@@ -1,5 +1,11 @@
 # armory-online
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d48ae8cf-6791-48d7-bace-c2cb06c06780/deploy-status)](https://app.netlify.com/sites/armory417/deploys)
+
+The website of ARMORY.
+
+Visit the page at [https://armory417.netlify.com](https://armory417.netlify.com).
+
 ## Project setup
 ```
 npm install
