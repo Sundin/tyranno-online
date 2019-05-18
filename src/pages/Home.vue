@@ -3,6 +3,7 @@
     <h1>News</h1>
     <h3>Armory Online</h3>
     <p>2019-05-17: Website launched.</p>
+    <hr>
     <h3>Music Video</h3>
     <p>
       2018-10-04: Our first music video is out now! The song is "Vault Seven" from our latest album "The Search", out now through High Roller Records.

@@ -3,6 +3,7 @@
     <h1>Upcoming Gigs</h1>
     <p>2019-06-28: Noselake Metal Festival, Nässjö, Sweden</p>
     <p>2019-07-12: Metal Magic Festival, Fredericia, Denmark</p>
+    <hr>
     <h1>Past Gigs</h1>
     <p>2019-05-04: Truckstop Alaska, Gothenburg, Sweden (cancelled Agent Steel gig)</p>
     <p>2019-03-10: Bambi Galore, Hamburg, Germany</p>

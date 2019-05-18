@@ -8,6 +8,7 @@
     <p>
       <a href="https://armory417.bandcamp.com/">Bandcamp Page</a>
     </p>
+    <hr>
     <p>For vinyls, please go to High Roller Records:</p>
     <p>
       <a href="https://www.hrrshop.de/navi.php?suchausdruck=armory">High Roller Records Webshop</a>

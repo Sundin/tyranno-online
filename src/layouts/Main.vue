@@ -72,4 +72,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+hr {
+  width: 50%;
+  color: var(--text-color);
+}
 </style>
