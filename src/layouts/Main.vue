@@ -30,7 +30,6 @@ export default {
 body,
 html {
   height: 100%;
-  width: 100%;
   background-color: black;
 }
 
@@ -67,5 +66,10 @@ a.active {
 }
 a:hover {
   color: var(--hover-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 </style>

@@ -26,31 +26,27 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .navbar {
   width: 100%;
   overflow: auto;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .navbar a {
     float: none;
     display: block;
   }
 }
 
-a {
+.navbar a {
   color: var(--text-color);
   padding: 0 20px;
   font-family: Impact, Charcoal, sans-serif;
   font-size: 30px;
+  float: center;
 }
 
-a.active {
+.navbar a.active {
   color: var(--link-color);
 }
 </style>
