@@ -37,12 +37,12 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #0ebe08;
+  color: var(--text-color);
   padding: 0 20px;
   font-family: Impact, Charcoal, sans-serif;
   font-size: 30px;
 }
 a.active {
-  color: #be3c08;
+  color: var(--link-color);
 }
 </style>

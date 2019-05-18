@@ -19,6 +19,12 @@ export default {
 </script>
 
 <style>
+:root {
+  --text-color: #0ebe08;
+  --link-color: #be3c08;
+  --hover-color: #ffffff;
+}
+
 body,
 html {
   height: 100%;
@@ -31,7 +37,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #0ebe08;
+  color: var(--text-color);
   max-width: 70ch;
   padding: 2ch;
   margin: auto;
@@ -49,9 +55,12 @@ html {
 }
 
 a {
-  color: #be3c08;
+  color: var(--link-color);
 }
 a.active {
-  color: #be3c08;
+  color: var(--link-color);
+}
+a:hover {
+  color: var(--hover-color);
 }
 </style>
