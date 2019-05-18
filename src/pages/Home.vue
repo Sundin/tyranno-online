@@ -25,6 +25,7 @@ const news = [
 
 import MainLayout from "../layouts/Main.vue";
 import NewsEntry from "../components/NewsEntry.vue";
+
 export default {
   components: {
     MainLayout,

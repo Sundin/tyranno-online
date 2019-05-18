@@ -1,8 +1,9 @@
 <template>
   <main-layout>
     <h1>Upcoming Gigs</h1>
-    <p>2019-06-28: Noselake Metal Festival, Nässjö, Sweden</p>
-    <p>2019-07-12: Metal Magic Festival, Fredericia, Denmark</p>
+    <div v-for="item in getUpcomingGigs()">
+      <gig-entry v-bind:item="item"></gig-entry>
+    </div>
     <hr>
     <h1>Past Gigs</h1>
     <p>2019-05-04: Truckstop Alaska, Gothenburg, Sweden (cancelled Agent Steel gig)</p>
@@ -39,10 +40,29 @@
 </template>
 
 <script>
+const upcomingGigs = [
+  {
+    date: "2019-06-28",
+    location: "Noselake Metal Festival, Nässjö, Sweden"
+  },
+  {
+    date: "2019-07-12",
+    location: "Metal Magic Festival, Fredericia, Denmark"
+  }
+];
+
 import MainLayout from "../layouts/Main.vue";
+import GigEntry from "../components/Gig.vue";
+
 export default {
   components: {
-    MainLayout
+    MainLayout,
+    GigEntry
+  },
+  methods: {
+    getUpcomingGigs: function() {
+      return upcomingGigs;
+    }
   }
 };
 </script>
