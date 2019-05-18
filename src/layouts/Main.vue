@@ -2,7 +2,9 @@
   <div class="bg">
     <div id="app">
       <Header/>
-      <slot id="content"></slot>
+      <div id="content">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -38,6 +40,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--text-color);
+}
+
+#content {
   max-width: 70ch;
   padding: 2ch;
   margin: auto;

@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <v-link href="/">
-      <img alt="Vue logo" src="../assets/logo.png">
+      <img alt="Armory logo" src="../assets/logo.png">
     </v-link>
     <ul>
       <li>
@@ -28,6 +28,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+img {
+  max-width: 100%;
+  height: auto;
+}
 ul {
   list-style-type: none;
   padding: 0;
