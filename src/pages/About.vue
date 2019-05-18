@@ -1,5 +1,6 @@
 <template>
   <main-layout>
+    <h1>About Armory</h1>
     <p>Hyper Speed Metal from Hisingen Island in Gothenburg, Sweden.</p>
     <p>Contact: armoryofficial@gmail.com</p>
     <h1>Lineup</h1>
