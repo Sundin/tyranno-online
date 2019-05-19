@@ -9,9 +9,9 @@
 
 <script>
 export default {
-  name: "GigEntry",
+  name: 'GigEntry',
   props: {
-    item: Object
-  }
+    item: Object,
+  },
 };
 </script>

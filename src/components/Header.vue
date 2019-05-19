@@ -14,13 +14,13 @@
 </template>
 
 <script>
-import VLink from "./VLink.vue";
+import VLink from './VLink.vue';
 
 export default {
-  name: "Header",
+  name: 'Header',
   components: {
-    VLink
-  }
+    VLink,
+  },
 };
 </script>
 
