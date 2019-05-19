@@ -13,7 +13,7 @@
 </template>
 
 <script>
-const upcomingGigs = [
+const gigs = [
   {
     date: "2019-06-28",
     location: "Noselake Metal Festival, Nässjö, Sweden"
@@ -21,10 +21,7 @@ const upcomingGigs = [
   {
     date: "2019-07-12",
     location: "Metal Magic Festival, Fredericia, Denmark"
-  }
-];
-
-const pastGigs = [
+  },
   {
     date: "2019-05-04",
     location: "Truckstop Alaska, Gothenburg, Sweden",
@@ -155,6 +152,8 @@ const pastGigs = [
 import MainLayout from "../layouts/Main.vue";
 import GigEntry from "../components/Gig.vue";
 
+let today = new Date().setHours(0);
+
 export default {
   components: {
     MainLayout,
@@ -162,11 +161,10 @@ export default {
   },
   methods: {
     getUpcomingGigs: function() {
-      // TODO: have all gigs in single array and split based upon current date!
-      return upcomingGigs;
+      return gigs.filter(gig => new Date(gig.date) >= today);
     },
     getPastGigs: function() {
-      return pastGigs;
+      return gigs.filter(gig => new Date(gig.date) < today);
     }
   }
 };
