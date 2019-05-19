@@ -31,6 +31,8 @@ const news = [
 import MainLayout from "../layouts/Main.vue";
 import NewsEntry from "../components/NewsEntry.vue";
 
+let today = new Date().setHours(24);
+
 export default {
   components: {
     MainLayout,
@@ -38,7 +40,7 @@ export default {
   },
   methods: {
     getNewsEntries: function() {
-      return news;
+      return news.filter(entry => new Date(entry.date) <= today);
     }
   }
 };
