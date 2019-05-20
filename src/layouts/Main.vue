@@ -31,6 +31,7 @@ body,
 html {
   height: 100%;
   background-color: black;
+  margin: 0;
 }
 
 #app {
@@ -49,9 +50,11 @@ html {
 
 .bg {
   background-image: url("../assets/background.jpg");
+  background-attachment: fixed;
 
-  height: 100%;
+  overflow: scroll;
   width: 100%;
+  height: 100%;
 
   background-position: center;
   background-repeat: no-repeat;
