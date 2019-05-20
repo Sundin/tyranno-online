@@ -33,8 +33,9 @@
     <img src="../assets/band_photo.jpg">
     <h1>Discography</h1>
     <p>2018: Live in the Abyss (Live Cassette)</p>
-    <p>2018: The Search</p>
-    <p>2016: World Peace... Cosmic War</p>
+    <p><b>2018: The Search</b></p>
+    <p><b>2016: World Peace... Cosmic War</b></p>
+    <p>2016: Critical Mass Vol. 3 <br>(compilation appearance with the song <span class="title">High Speed Death</span>)</p>
     <p>2015: S.M.I. (Demo)</p>
     <p>2013: Open Fire! (Demo)</p>
 
