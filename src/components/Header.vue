@@ -41,8 +41,9 @@ export default {
 .navbar a {
   color: var(--text-color);
   padding: 0 20px;
-  font-family: Impact, Charcoal, sans-serif;
+  font-family: Impact, Georgia, serif;
   font-size: 30px;
+  font-weight: bold;
   float: center;
 }
 
