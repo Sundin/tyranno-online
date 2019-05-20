@@ -57,6 +57,9 @@
       <a href="https://www.youtube.com/watch?v=9YDNAMrtTVU">The Search album trailer</a>
     </p>
     <p>
+      <a href="https://www.youtube.com/user/ArmoryOfficial">Official YouTube channel</a>
+    </p>
+    <p>
       <a href="https://www.metal-archives.com/bands/Armory/3540372230">Metal Archives</a>
     </p>
     <p>
