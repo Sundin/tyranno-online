@@ -78,7 +78,7 @@ img {
 
 hr {
   width: 50%;
-  color: var(--text-color);
+  border-color: var(--text-color);
 }
 
 span.title {
