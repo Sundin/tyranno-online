@@ -80,4 +80,8 @@ hr {
   width: 50%;
   color: var(--text-color);
 }
+
+span.title {
+  font-style: italic;
+}
 </style>

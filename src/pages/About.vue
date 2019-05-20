@@ -6,14 +6,16 @@
 
     <p>
       Armory started out in 2012 and has been delivering hyperspeed metal since. After two
-      demos the debut full length album World Peace… Cosmic War was released via High
-      Roller Records in 2016. The album got great reviews from all around the world and was
-      priced “Album of the year” by Metal Invader. The band then got to share the stage with
+      demos the debut full length album <span class="title">World Peace... Cosmic War</span>
+      was released via High Roller Records in 2016. The album got great reviews from all
+      around the world and was priced "Album of the year" by Metal Invader.
+      The band then got to share the stage with
       bigger bands such as Pentagram and Nifelheim. With all the new experience the band
-      went into the studio again in late 2017 to record their second album. The Search was
+      went into the studio again in late 2017 to record their second album.
+      <span class="title">The Search</span> was
       released in July 2018 via High Roller and again the album got great reviews and it was
       proved that the songwriting had developed in the right direction. Today Armory are
-      aiming to bring the band to the next level and to deliver their hypespeed metal outside
+      aiming to bring the band to the next level and to deliver their hyperspeed metal outside
       Scandinavia.
     </p>
 

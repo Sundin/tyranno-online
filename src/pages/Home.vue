@@ -20,7 +20,7 @@ const news = [
   {
     heading: 'Music Video',
     date: '2018-10-04',
-    body: `Our first music video is out now! The song is "Vault Seven" from our latest album "The Search", out now through High Roller Records.
+    body: `Our first music video is out now! The song is <span class="title">Vault Seven</span> from our latest album <span class="title">The Search</span>, out now through High Roller Records.
       The video was directed by the mighty Jim Nedergård and is a dark story about invisable enemies, paranoia and the dangerous power of knowledge.
      <a href="https://www.youtube.com/watch?v=UYj3EnEON8k">Watch it here!</a>`,
   },
@@ -28,7 +28,7 @@ const news = [
     heading: 'The Search Out Today!',
     date: '2018-07-13',
     body:
-      'It is Friday the 13th and our second full-length album "The Search" is released today by High Roller Records!',
+      'It is Friday the 13th and our second full-length album <span class="title">The Search</span> is released today by High Roller Records!',
   },
 ];
 
