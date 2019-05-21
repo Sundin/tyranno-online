@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <v-link href="/">
-      <img alt="Armory logo" src="../assets/logo.png">
+      <img alt="Armory logo" class="logo" src="../assets/logo.png">
     </v-link>
     <div class="navbar">
       <v-link href="/">Home</v-link>
@@ -29,6 +29,11 @@ export default {
 .navbar {
   width: 100%;
   overflow: auto;
+}
+
+.logo {
+  padding: 12px;
+  max-width: 90%;
 }
 
 @media screen and (max-width: 600px) {

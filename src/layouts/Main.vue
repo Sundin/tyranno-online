@@ -61,6 +61,12 @@ html {
   background-size: cover;
 }
 
+@media screen and (max-width: 600px) {
+  .bg {
+    background-size: auto;
+  }
+}
+
 a {
   color: var(--link-color);
 }
