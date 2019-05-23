@@ -4,7 +4,7 @@
 
 The website of ARMORY.
 
-Visit the page at [https://armory417.netlify.com](https://armory417.netlify.com).
+Visit the page at [www.armory.se](https://www.armory.se).
 
 ## Project setup
 ```
