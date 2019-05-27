@@ -19,12 +19,18 @@ import GigEntry from "../components/Gig.vue";
 const gigs = [
   {
     date: "2019-06-28",
-    location: "Noselake Metal Festival, Nässjö, Sweden",
+    venue: "Noselake Metal Festival",
+    location: "Nässjö, Sweden",
+    link: "https://noselakemetalfestival.se/",
     tickets: "https://secure.tickster.com/sv/wz6ztumev1t8wyu/products"
   },
   {
     date: "2019-07-12",
-    location: "Metal Magic Festival, Fredericia, Denmark"
+    venue: "Metal Magic Festival",
+    location: "Fredericia, Denmark",
+    link: "http://metal-magic.dk/",
+    tickets:
+      "https://billetto.dk/e/metal-magic-festival-part-xii-billetter-322346?fbclid=IwAR0W_lAyDNbLSyW7frcsFTZu8NeZc7pyrwZqiFVGR09aSmxDS2W8FK02bFU"
   },
   {
     date: "2019-05-04",

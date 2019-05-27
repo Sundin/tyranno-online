@@ -1,7 +1,12 @@
 <template>
   <div class="gig-entry">
     <p>
-      {{item.date}}: {{item.location}}
+      {{item.date}}:
+      <template v-if="item.link">
+        <a :href="item.link">{{item.venue}},</a>
+        {{item.location}}
+      </template>
+      <template v-else>{{item.location}}</template>
       <template v-if="item.comment">({{item.comment}})</template>
       <template v-if="item.tickets">
         –
