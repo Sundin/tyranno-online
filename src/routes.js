@@ -3,6 +3,7 @@ import About from './pages/About.vue';
 import Tour from './pages/Tour.vue';
 import Fanclub from './pages/Fanclub.vue';
 import Merch from './pages/Merch.vue';
+import Vault from './pages/Vault.vue';
 
 const routes = {
   '/': Home,
@@ -10,6 +11,7 @@ const routes = {
   '/tour': Tour,
   '/fanclub': Fanclub,
   '/merch': Merch,
+  '/vault': Vault,
 };
 
 export default routes;
