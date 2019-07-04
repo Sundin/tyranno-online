@@ -13,6 +13,14 @@ import NewsEntry from "../components/NewsEntry.vue";
 
 const news = [
   {
+    heading: "Metal Magic",
+    date: "2019-07-01",
+    body: `Soon we will head over to Denmark for our first show there ever. 
+    The location will be non other than the legendary Metal Magic Festival in Fredericia on July 11-13th. 
+    Our gig is on Friday the 12th, but beware that we will stay for the whole festival and have a wild time with everyone! See you there! <br>
+    <a href="http://metal-magic.dk/">Read more and get your tickets here!</a>`
+  },
+  {
     heading: "Noselake Metal Festival",
     date: "2019-05-25",
     body: `On June the 28th we will return once more to Småland, 
