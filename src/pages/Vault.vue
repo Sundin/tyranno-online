@@ -87,6 +87,7 @@ input {
   font-size: 21px;
   text-align: center;
   border: 2px solid var(--text-color);
+  outline: none;
 }
 
 .wrongPassword {
@@ -115,6 +116,7 @@ button {
   padding: 5px 15px;
   font-family: Georgia, serif;
   cursor: pointer;
+  outline: none;
   opacity: 0.8;
   transition: 0.3s;
 }
