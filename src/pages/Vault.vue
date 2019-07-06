@@ -13,8 +13,6 @@
 <script>
 import MainLayout from "../layouts/Main.vue";
 
-let i = 0;
-
 export default {
   components: {
     MainLayout
@@ -22,6 +20,7 @@ export default {
   methods: {
     enterVault(password) {
       console.log(password);
+      this.enterButtonPressed = this.pw.toLowerCase().trim() === "aaa";
     },
     isSpaceMarauder(password) {
       return password === "aaa";
@@ -30,12 +29,13 @@ export default {
   data: function() {
     return {
       pw: "",
-      secretOfSteel: "aaa"
+      secretOfSteel: "aaa",
+      enterButtonPressed: false
     };
   },
   computed: {
     hasAccess: function() {
-      return this.pw === "aaa";
+      return this.enterButtonPressed && this.pw.toLowerCase().trim() === "aaa";
     }
   }
 };
