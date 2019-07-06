@@ -4,11 +4,11 @@
       <h1>Greetings Space Marauder!</h1>
       <p>
         Without you our mission would be doomed to fail.
-        As a special token of our appreciation, we therefore would like to give you something in return.
+        As a special token of our appreciation, we would therefore like to give you something in return.
       </p>
       <p>
         Below you will find an unreleased song under entitled MIDNIGHT KILLER for your ears only. It was recorded during the "The Search" sessions but ultimately left off the album.
-        Enjoy and keep on speeding Marauder!
+        Enjoy and keep on speeding!
       </p>
       <br />
       <audio controls>
@@ -42,29 +42,37 @@ var vault = {
   },
   methods: {
     enterVault(password) {
-      console.log(password);
-      this.wrongPassword = this.pw.toLowerCase().trim() !== "aaa";
+      this.wrongPassword = !this.correctPassword();
       var self = this;
       setTimeout(() => {
         self.wrongPassword = false;
       }, 1500);
-      this.enterButtonPressed = this.pw.toLowerCase().trim() === "aaa";
+      this.enterButtonPressed = this.correctPassword();
     },
-    isSpaceMarauder(password) {
-      return password === "aaa";
+    correctPassword() {
+      const normalizedPassword = this.pw.toLowerCase().trim();
+      return this.hashCode(normalizedPassword) === -114314724;
+    },
+    hashCode(str) {
+      return str
+        .split("")
+        .reduce(
+          (prevHash, currVal) =>
+            ((prevHash << 5) - prevHash + currVal.charCodeAt(0)) | 0,
+          0
+        );
     }
   },
   data: function() {
     return {
       pw: "",
-      secretOfSteel: "aaa",
       enterButtonPressed: false,
       wrongPassword: false
     };
   },
   computed: {
     hasAccess: function() {
-      return this.enterButtonPressed && this.pw.toLowerCase().trim() === "aaa";
+      return this.enterButtonPressed && this.correctPassword();
     }
   }
 };
