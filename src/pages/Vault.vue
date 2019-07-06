@@ -8,7 +8,7 @@
       </p>
       <p>
         Below you will find an unreleased song under entitled MIDNIGHT KILLER for your ears only. It was recorded during the "The Search" sessions but ultimately left off the album.
-        Enjoy and keep on speeding!
+        Enjoy and keep on speeding out there!
       </p>
       <br />
       <audio controls>
