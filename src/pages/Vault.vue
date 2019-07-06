@@ -25,6 +25,7 @@
         v-model="pw"
         autofocus="autofocus"
         onfocus="this.select()"
+        v-on:keyup.enter="enterVault(pw)"
       />
       <p>
         <button v-on:click="enterVault(pw)">ENTER THE VAULT</button>
