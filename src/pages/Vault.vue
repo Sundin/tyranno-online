@@ -1,18 +1,35 @@
 <template>
   <main-layout>
-    <h1>Welcome to Vault Seven</h1>
-    <p>To Enter the Vault, enter the secret of steel</p>
-    <input
-      type="password"
-      v-bind:class="{ wrongPassword: wrongPassword }"
-      v-model="pw"
-      autofocus="autofocus"
-      onfocus="this.select()"
-    />
-    <p>
-      <button v-on:click="enterVault(pw)">ENTER THE VAULT</button>
-    </p>
-    <div v-if="hasAccess">hej</div>
+    <div v-if="hasAccess">
+      <h1>Greetings Space Marauder!</h1>
+      <p>
+        Without you our mission would be doomed to fail.
+        As a special token of our appreciation, we therefore would like to give you something in return.
+      </p>
+      <p>
+        Below you will find an unreleased song under entitled MIDNIGHT KILLER for your ears only. It was recorded during the "The Search" sessions but ultimately left off the album.
+        Enjoy and keep on speeding Marauder!
+      </p>
+      <br />
+      <audio controls>
+        <source src="../assets/Midnight_Killer.mp3" type="audio/mpeg" controls />Your browser does not support the audio element.
+      </audio>
+      <p>ARMORY 2019</p>
+    </div>
+    <div v-else>
+      <h1>Welcome to Vault Seven</h1>
+      <p>To access the Vault, enter the secret of steel:</p>
+      <input
+        type="password"
+        v-bind:class="{ wrongPassword: wrongPassword }"
+        v-model="pw"
+        autofocus="autofocus"
+        onfocus="this.select()"
+      />
+      <p>
+        <button v-on:click="enterVault(pw)">ENTER THE VAULT</button>
+      </p>
+    </div>
   </main-layout>
 </template>
 
