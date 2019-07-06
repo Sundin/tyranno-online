@@ -11,7 +11,7 @@ const routes = {
   '/tour': Tour,
   '/fanclub': Fanclub,
   '/merch': Merch,
-  '/vault': Vault,
+  '/vault7': Vault,
 };
 
 export default routes;
