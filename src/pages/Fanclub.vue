@@ -14,15 +14,19 @@
         href="https://www.jawbreaker.se/product/space-marauders-membership/"
       >Click here to join the fanclub!</a>
     </p>
+
+    <a href="https://www.jawbreaker.se/product/space-marauders-membership/">
+      <img src="../assets/space_marauders_2019.jpg" />
+    </a>
   </main-layout>
 </template>
 
 <script>
-import MainLayout from '../layouts/Main.vue';
+import MainLayout from "../layouts/Main.vue";
 
 export default {
   components: {
-    MainLayout,
-  },
+    MainLayout
+  }
 };
 </script>
