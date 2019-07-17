@@ -6,10 +6,8 @@
         Without you our mission would be doomed to fail.
         As a special token of our appreciation, we would therefore like to give you something in return.
       </p>
-      <p>
-        Below you will find an unreleased song under entitled MIDNIGHT KILLER for your ears only. It was recorded during the "The Search" sessions but ultimately left off the album.
-        Enjoy and keep on speeding out there!
-      </p>
+      <p>Below you will find an unreleased song entitled MIDNIGHT KILLER for your ears only. It was recorded during the "The Search" sessions but ultimately left off the final album.</p>Enjoy and keep on speeding out there!
+      <br />
       <br />
       <audio controls>
         <source src="../assets/Midnight_Killer.mp3" type="audio/mpeg" controls />Your browser does not support the audio element.
@@ -52,7 +50,7 @@ var vault = {
     },
     correctPassword() {
       const normalizedPassword = this.pw.toLowerCase().trim();
-      return this.hashCode(normalizedPassword) === -114314724;
+      return this.hashCode(normalizedPassword) === 1642731934;
     },
     hashCode(str) {
       return str
