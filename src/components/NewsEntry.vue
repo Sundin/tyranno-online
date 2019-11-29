@@ -13,9 +13,9 @@
 
 <script>
 export default {
-  name: "NewsEntry",
+  name: 'NewsEntry',
   props: {
-    item: Object
-  }
+    item: Object,
+  },
 };
 </script>

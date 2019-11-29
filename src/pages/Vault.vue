@@ -33,16 +33,16 @@
 </template>
 
 <script>
-import MainLayout from "../layouts/Main.vue";
+import MainLayout from '../layouts/Main.vue';
 
-var vault = {
+const vault = {
   components: {
-    MainLayout
+    MainLayout,
   },
   methods: {
     enterVault(password) {
       this.wrongPassword = !this.correctPassword();
-      var self = this;
+      const self = this;
       setTimeout(() => {
         self.wrongPassword = false;
       }, 1500);
@@ -54,26 +54,25 @@ var vault = {
     },
     hashCode(str) {
       return str
-        .split("")
+        .split('')
         .reduce(
-          (prevHash, currVal) =>
-            ((prevHash << 5) - prevHash + currVal.charCodeAt(0)) | 0,
-          0
+          (prevHash, currVal) => ((prevHash << 5) - prevHash + currVal.charCodeAt(0)) | 0,
+          0,
         );
-    }
+    },
   },
-  data: function() {
+  data() {
     return {
-      pw: "",
+      pw: '',
       enterButtonPressed: false,
-      wrongPassword: false
+      wrongPassword: false,
     };
   },
   computed: {
-    hasAccess: function() {
+    hasAccess() {
       return this.enterButtonPressed && this.correctPassword();
-    }
-  }
+    },
+  },
 };
 
 export default vault;

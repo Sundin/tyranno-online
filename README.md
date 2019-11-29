@@ -6,6 +6,8 @@ The website of ARMORY.
 
 Visit the page at [www.armory.se](https://www.armory.se).
 
+Currently not compatible with prettier plugin.
+
 ## Project setup
 ```
 npm install
@@ -28,8 +30,26 @@ npm run test
 
 ### Lints and fixes files
 ```
-npm run lint
+npm run lint --fix
 ```
+
+## Maintenance
+
+### Add a new gig
+Add to `Tour.vue` with the following fields:
+
+* date
+* venue
+* location
+* link (optional)
+* tickets (optional)
+
+### Add a news entry
+Add to `Home.vue` with the following fields:
+
+* heading
+* date
+* body
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
