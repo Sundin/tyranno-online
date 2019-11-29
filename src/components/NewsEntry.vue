@@ -1,19 +1,21 @@
 <template>
   <div class="news-entry">
-    <h3>{{item.heading}}</h3>
+    <h3>{{ item.heading }}</h3>
     <p>
-      {{item.date}}:
+      <i>{{ item.date }}</i>
+      <br /><br />
       <span v-html="item.body"></span>
     </p>
-    <hr>
+    <br />
+    <hr />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'NewsEntry',
+  name: "NewsEntry",
   props: {
-    item: Object,
-  },
+    item: Object
+  }
 };
 </script>

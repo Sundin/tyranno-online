@@ -13,11 +13,19 @@ import NewsEntry from "../components/NewsEntry.vue";
 
 const news = [
   {
+    heading: "We are opening for DARKNESS!",
+    date: "2019-11-29",
+    body: `On the 4th of April 2020 we will return to Småland together with the mighty DARKNESS from Germany. See you there speedfreekz!
+    <p>
+    <a href="https://www.tickster.com/sv/events/12jmb53emx4wfw2/2020-04-04/darkness-armory-klubb-dissonans">Read more and get your tickets here!</a>`
+  },
+  {
     heading: "Metal Magic",
     date: "2019-07-01",
-    body: `Soon we will head over to Denmark for our first show there ever. 
+    body: `Soon we will head over to Denmark for our first show on Danish ground ever. 
     The location will be non other than the legendary Metal Magic Festival in Fredericia on July 11-13th. 
-    Our gig is on Friday the 12th, but beware that we will stay for the whole festival and have a wild time with everyone! See you there! <br>
+    Our gig is on Friday the 12th, but beware that we will stay for the whole festival and have a wild time with everyone! See you there!
+    <p>
     <a href="http://metal-magic.dk/">Read more and get your tickets here!</a>`
   },
   {
@@ -38,7 +46,7 @@ const news = [
     date: "2018-10-04",
     body: `Our first music video is out now! The song is <span class="title">Vault Seven</span> from our latest album <span class="title">The Search</span>, out now through High Roller Records.
       The video was directed by the mighty Jim Nedergård and is a dark story about invisible enemies, paranoia and the dangerous power of knowledge.
-     <br><a href="https://www.youtube.com/watch?v=UYj3EnEON8k">Watch it here!</a>`
+      <p><a href="https://www.youtube.com/watch?v=UYj3EnEON8k">Watch it here!</a>`
   },
   {
     heading: "The Search Out Today!",

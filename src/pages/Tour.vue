@@ -4,7 +4,7 @@
     <div v-for="item in getUpcomingGigs()">
       <gig-entry v-bind:item="item"></gig-entry>
     </div>
-    <hr>
+    <hr />
     <h1>Past Gigs</h1>
     <div v-for="item in getPastGigs()">
       <gig-entry v-bind:item="item"></gig-entry>
@@ -17,6 +17,13 @@ import MainLayout from "../layouts/Main.vue";
 import GigEntry from "../components/Gig.vue";
 
 const gigs = [
+  {
+    date: "2020-04-04",
+    location: "Klubb Dissonans, Jönköping, Sweden",
+    comment: "Opening for DARKNESS",
+    tickets:
+      "https://www.tickster.com/sv/events/12jmb53emx4wfw2/2020-04-04/darkness-armory-klubb-dissonans"
+  },
   {
     date: "2019-06-28",
     venue: "Noselake Metal Festival",
