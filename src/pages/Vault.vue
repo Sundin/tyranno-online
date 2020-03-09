@@ -4,13 +4,17 @@
       <h1>Greetings Space Marauder!</h1>
       <p>
         Without you our mission would be doomed to fail.
-        As a special token of our appreciation, we would therefore like to give you something in return.
+        As a special token of our appreciation,
+        we would therefore like to give you something in return.
       </p>
-      <p>Below you will find an unreleased song entitled MIDNIGHT KILLER for your ears only. It was recorded during the "The Search" sessions but ultimately left off the final album.</p>Enjoy and keep on speeding out there!
+      <p>Below you will find an unreleased song entitled MIDNIGHT KILLER for your ears only.
+      It was recorded during the "The Search" sessions but ultimately left off the final album.
+      </p>Enjoy and keep on speeding out there!
       <br />
       <br />
       <audio controls>
-        <source src="../assets/Midnight_Killer.mp3" type="audio/mpeg" controls />Your browser does not support the audio element.
+        <source src="../assets/Midnight_Killer.mp3" type="audio/mpeg" controls />
+        Your browser does not support the audio element.
       </audio>
       <p>ARMORY 2019</p>
     </div>
@@ -23,10 +27,10 @@
         v-model="pw"
         autofocus="autofocus"
         onfocus="this.select()"
-        v-on:keyup.enter="enterVault(pw)"
+        v-on:keyup.enter="enterVault()"
       />
       <p>
-        <button v-on:click="enterVault(pw)">ENTER THE VAULT</button>
+        <button v-on:click="enterVault()">ENTER THE VAULT</button>
       </p>
     </div>
   </main-layout>
@@ -40,7 +44,7 @@ const vault = {
     MainLayout,
   },
   methods: {
-    enterVault(password) {
+    enterVault() {
       this.wrongPassword = !this.correctPassword();
       const self = this;
       setTimeout(() => {
@@ -53,6 +57,7 @@ const vault = {
       return this.hashCode(normalizedPassword) === 1642731934;
     },
     hashCode(str) {
+      /* eslint no-bitwise: 0 */
       return str
         .split('')
         .reduce(

@@ -1,7 +1,8 @@
 <template>
   <main-layout>
     <h1>Merch</h1>
-    <p>Support Armory by ordering your speed metal merchandise from any of the following links. All money goes directly to the band.</p>
+    <p>Support Armory by ordering your speed metal merchandise from any of the following links.
+    All money goes directly to the band.</p>
     <p>
       <a href="https://www.jawbreaker.se/product-tag/armory/">Jawbreaker Records</a>
     </p>
