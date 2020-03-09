@@ -13,9 +13,19 @@ import NewsEntry from '../components/NewsEntry.vue';
 
 const news = [
   {
+    heading: '4/17',
+    date: '2019-03-01',
+    body: `This year we are gonna celebrate the official speed metal island day (April 17th or 4/17) at The Abyss 
+    in Gothenburg together with reigning heavy metal champions Ambush from Småland.
+    Ambush are in turn celebrating the release of their third album "Infidel", out on High Roller Records, so this will be a night to remember.
+    The gig is expected to sell out to make sure to get your tickets in advance.
+    <p>
+    <a href="https://www.tickster.com/sv/events/avbm5ce4l51ue7g/2020-04-17/ambush-armory">Tickets available here.</a>`,
+  },
+  {
     heading: 'We are opening for DARKNESS!',
     date: '2019-11-29',
-    body: `On the 4th of April 2020 we will return to Småland together with the mighty DARKNESS from Germany. See you there speedfreekz!
+    body: `On the 4th of April 2020 we will return to Jönköping, Småland together with the mighty DARKNESS from Germany. See you there speedfreekz!
     <p>
     <a href="https://www.tickster.com/sv/events/12jmb53emx4wfw2/2020-04-04/darkness-armory-klubb-dissonans">Read more and get your tickets here!</a>`,
   },

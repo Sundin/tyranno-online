@@ -18,6 +18,13 @@ import GigEntry from '../components/Gig.vue';
 
 const gigs = [
   {
+    date: '2020-04-17',
+    location: 'The Abyss, Gothenburg, Sweden',
+    comment: 'With Ambush',
+    tickets:
+      'https://www.tickster.com/sv/events/avbm5ce4l51ue7g/2020-04-17/ambush-armory',
+  },
+  {
     date: '2020-04-04',
     location: 'Klubb Dissonans, Jönköping, Sweden',
     comment: 'Opening for DARKNESS',
