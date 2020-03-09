@@ -1,13 +1,13 @@
 <template>
   <main-layout>
     <h1>Upcoming Gigs</h1>
-    <div v-for="item in getUpcomingGigs()">
-      <gig-entry v-bind:item="item"></gig-entry>
+    <div v-for="gig in getUpcomingGigs()" v-bind:key="gig.date">
+      <gig-entry v-bind:item="gig"></gig-entry>
     </div>
     <hr />
     <h1>Past Gigs</h1>
-    <div v-for="item in getPastGigs()">
-      <gig-entry v-bind:item="item"></gig-entry>
+    <div v-for="gig in getPastGigs()" v-bind:key="gig.date">
+      <gig-entry v-bind:item="gig"></gig-entry>
     </div>
   </main-layout>
 </template>
