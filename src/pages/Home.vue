@@ -13,8 +13,14 @@ import NewsEntry from '../components/NewsEntry.vue';
 
 const news = [
   {
+    heading: 'Outbreak of Evil',
+    date: '2020-03-20',
+    body: `Unfortunately our gig with Darkness on 2020-04-04 has been cancelled due to the current quarantine situation on Sol III. 
+    Our gig with Ambush in Gothenburg on 2020-04-17 is still on though so make sure to get your tickets <a href="https://www.tickster.com/sv/events/avbm5ce4l51ue7g/2020-04-17/ambush-armory">here</a>!`,
+  },
+  {
     heading: '4/17',
-    date: '2019-03-01',
+    date: '2020-03-01',
     body: `This year we are gonna celebrate the official speed metal island day (April 17th or 4/17) at The Abyss 
     in Gothenburg together with reigning heavy metal champions Ambush from Småland.
     Ambush are in turn celebrating the release of their third album "Infidel", out on High Roller Records, so this will be a night to remember.

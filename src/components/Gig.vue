@@ -1,6 +1,6 @@
 <template>
   <div class="gig-entry">
-    <p>
+    <p v-bind:class="{ cancelled: item.cancelled }">
       {{ item.date }}:
       <template v-if="item.link">
         <a :href="item.link">{{ item.venue }},</a>
@@ -24,3 +24,12 @@ export default {
   },
 };
 </script>
+
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.cancelled {
+  text-decoration: line-through;
+}
+
+</style>

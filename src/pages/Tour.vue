@@ -28,8 +28,7 @@ const gigs = [
     date: '2020-04-04',
     location: 'Klubb Dissonans, Jönköping, Sweden',
     comment: 'Opening for DARKNESS',
-    tickets:
-      'https://www.tickster.com/sv/events/12jmb53emx4wfw2/2020-04-04/darkness-armory-klubb-dissonans',
+    cancelled: true,
   },
   {
     date: '2019-06-28',
