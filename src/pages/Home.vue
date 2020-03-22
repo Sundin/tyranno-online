@@ -13,9 +13,18 @@ import NewsEntry from '../components/NewsEntry.vue';
 
 const news = [
   {
+    heading: 'Space Marauders 2020',
+    date: '2020-03-22',
+    body: `The 2020 edition of the Space Marauders, also known as the fastest fanclub in the known universe, is now open for registration.
+    As usual, membership is only 100 SEK and included in the price is a very special gift.
+    We know we say this every year, but this year's secret will be something extraordinary indeed!
+    If you are ready to step into the unknown,
+    <a href="https://www.jawbreaker.se/product/space-marauders-membership/">follow this link</a>.`,
+  },
+  {
     heading: 'Outbreak of Evil',
     date: '2020-03-20',
-    body: `Unfortunately our gig with Darkness on 2020-04-04 has been cancelled due to the current quarantine situation on Sol III. 
+    body: `Unfortunately our gig with Darkness on 2020-04-04 has been cancelled due to the current quarantine situation on Sol III.
     Our gig with Ambush in Gothenburg on 2020-04-17 is still on though so make sure to get your tickets <a href="https://www.tickster.com/sv/events/avbm5ce4l51ue7g/2020-04-17/ambush-armory">here</a>!`,
   },
   {
