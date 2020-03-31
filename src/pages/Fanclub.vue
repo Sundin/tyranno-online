@@ -9,11 +9,11 @@
       as well as the highly sought-after "Live in the Abyss" live cassette.
       We have members from all around the galaxy.
     </p>
-    <p>
+    <h3>
       <a
         href="https://www.jawbreaker.se/product/space-marauders-membership/"
       >Click here to join the fanclub!</a>
-    </p>
+    </h3>
 
     <a href="https://www.jawbreaker.se/product/space-marauders-membership/">
       <img src="../assets/space_marauders_2019.jpg" />
