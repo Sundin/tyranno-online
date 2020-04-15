@@ -69,6 +69,7 @@ html {
 
 a {
   color: var(--link-color);
+  font-weight: bold;
 }
 a.active {
   color: var(--link-color);
