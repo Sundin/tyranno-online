@@ -13,13 +13,21 @@ import NewsEntry from '../components/NewsEntry.vue';
 
 const news = [
   {
+    heading: 'A Message From Space',
+    date: '2020-04-10',
+    body: `Unfortunately but not surprisingly our gig at The Abyss together with Ambush has been postponed to an unknown date.
+    As all of our concerts are either cancelled or postponed, we stand without income at the moment.
+    If you would like to show your support you can join our fanclub for just 100 SEK and you will get a killer fanclub package in return.
+    <p><a href="https://www.jawbreaker.se/product/space-marauders-membership/">Follow this hyperlink to read more</a>.`,
+  },
+  {
     heading: 'Space Marauders 2020',
     date: '2020-03-22',
     body: `The 2020 edition of the Space Marauders, also known as the fastest fanclub in the known universe, is now open for registration.
     As usual, membership is only 100 SEK and included in the price is a very special gift.
     We know we say this every year, but this year's secret will be something extraordinary indeed!
     If you are ready to step into the unknown,
-    <a href="https://www.jawbreaker.se/product/space-marauders-membership/">follow this link</a>.`,
+    <a href="https://www.jawbreaker.se/product/space-marauders-membership/">follow this hyperlink</a>.`,
   },
   {
     heading: 'Outbreak of Evil',

@@ -21,8 +21,7 @@ const gigs = [
     date: '2020-04-17',
     location: 'The Abyss, Gothenburg, Sweden',
     comment: 'With Ambush',
-    tickets:
-      'https://www.tickster.com/sv/events/avbm5ce4l51ue7g/2020-04-17/ambush-armory',
+    cancelled: true,
   },
   {
     date: '2020-04-04',
