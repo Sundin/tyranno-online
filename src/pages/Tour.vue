@@ -2,12 +2,12 @@
   <main-layout>
     <h1>Upcoming Gigs</h1>
     <div v-for="gig in getUpcomingGigs()" v-bind:key="gig.date">
-      <gig-entry v-bind:item="gig"></gig-entry>
+      <gig-entry v-bind:item="gig" v-bind:pastgig=false></gig-entry>
     </div>
     <hr />
     <h1>Past Gigs</h1>
     <div v-for="gig in getPastGigs()" v-bind:key="gig.date">
-      <gig-entry v-bind:item="gig"></gig-entry>
+      <gig-entry v-bind:item="gig" v-bind:pastgig=true></gig-entry>
     </div>
   </main-layout>
 </template>
@@ -47,7 +47,7 @@ const gigs = [
   {
     date: '2019-05-04',
     location: 'Truckstop Alaska, Gothenburg, Sweden',
-    comment: 'cancelled Agent Steel gig',
+    comment: 'with Agent Steel - who did not show up - and Black Viper',
   },
   {
     date: '2019-03-10',

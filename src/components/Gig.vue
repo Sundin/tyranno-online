@@ -8,7 +8,7 @@
       </template>
       <template v-else>{{ item.location }}</template>
       <template v-if="item.comment"> ({{ item.comment }})</template>
-      <template v-if="item.tickets">
+      <template v-if="showTickets">
         –
         <a :href="item.tickets">Tickets</a>.
       </template>
@@ -21,6 +21,12 @@ export default {
   name: 'GigEntry',
   props: {
     item: Object,
+    pastgig: Boolean,
+  },
+  computed: {
+    showTickets() {
+      return !this.pastgig && this.item.tickets;
+    },
   },
 };
 </script>
