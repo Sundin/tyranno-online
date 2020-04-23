@@ -2,14 +2,23 @@
   <main-layout>
     <div v-if="hasAccess">
       <h1>Greetings Space Marauder!</h1>
+      <h2>2020</h2>
+      <p>
+      The membership card of 2020 is the circuit board from an actual UFO detector.
+      You will find the instructions on how to use it to contruct your very own UFO detector here:
+      </p>
+      <a href="/ufo_detector.pdf">UFO Detector instructions.pdf</a>
+      <h2>2019</h2>
       <p>
         Without you our mission would be doomed to fail.
         As a special token of our appreciation,
         we would therefore like to give you something in return.
       </p>
-      <p>Below you will find an unreleased song entitled MIDNIGHT KILLER for your ears only.
+      <p>
+      Below you will find an unreleased song entitled MIDNIGHT KILLER for your ears only.
       It was recorded during the "The Search" sessions but ultimately left off the final album.
-      </p>Enjoy and keep on speeding out there!
+      </p>
+      Enjoy and keep on speeding out there!
       <br />
       <br />
       <audio controls>
