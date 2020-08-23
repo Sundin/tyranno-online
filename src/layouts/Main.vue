@@ -1,7 +1,8 @@
 <template>
   <div class="bg">
     <div id="app">
-      <Header/>
+      <Header />
+      <Analytics />
       <div id="content">
         <slot></slot>
       </div>
@@ -11,11 +12,13 @@
 
 <script>
 import Header from '../components/Header.vue';
+import Analytics from '../components/Analytics.vue';
 
 export default {
   name: 'app',
   components: {
     Header,
+    Analytics,
   },
 };
 </script>

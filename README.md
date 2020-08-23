@@ -53,3 +53,35 @@ Add to `Home.vue` with the following fields:
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## Deploy analytics backend
+Prerequisites:
+* Install [aws](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html) or [aws2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) CLI tool.
+* Install [sam](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) CLI tool.
+* Make sure the bucket `armory-analytics` exists.
+
+Package and deploy changes:
+
+    cd backend
+
+    sam package \
+        --template-file template.yml \
+        --output-template-file packaged.yml \
+        --s3-bucket armory-analytics \
+    && \
+    sam deploy \
+        --template-file packaged.yml \
+        --stack-name armory-analytics \
+        --capabilities CAPABILITY_IAM \
+        --region eu-west-1
+
+Get the base URL for the API:
+
+    aws cloudformation describe-stacks \
+        --stack-name armory-analytics \
+        --region eu-west-1 \
+        --query 'Stacks[].Outputs'
+
+
+https://5swv4r5tl6.execute-api.eu-west-1.amazonaws.com/Prod/

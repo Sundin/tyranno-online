@@ -1,0 +1,70 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  SaveAnalyticsLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.postAnalytics
+      Runtime: nodejs12.x
+      Policies:
+        - DynamoDBWritePolicy:
+            TableName: !Ref AnalyticsTable
+      Environment:
+        Variables:
+          DynamoTableName: !Ref AnalyticsTable
+      Events:
+        HttpPost:
+          Type: Api
+          Properties:
+            RestApiId: !Ref AnalyticsApiGateway
+            Path: '/analytics'
+            Method: post
+  GetAnalyticsLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.getAnalytics
+      Runtime: nodejs12.x
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref AnalyticsTable
+      Environment:
+        Variables:
+          DynamoTableName: !Ref AnalyticsTable
+      Events:
+        HttpPost:
+          Type: Api
+          Properties:
+            RestApiId: !Ref AnalyticsApiGateway
+            Path: '/analytics'
+            Method: get
+  AnalyticsApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      Cors:
+        AllowMethods: "'GET,POST,OPTIONS'"
+        AllowHeaders: "'*'"
+        AllowOrigin: "'*'"
+        AllowCredentials: "'*'"
+
+  AnalyticsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: monthkey
+          AttributeType: S
+        - AttributeName: timestamp-unique
+          AttributeType: S
+      KeySchema:
+        - AttributeName: monthkey
+          KeyType: HASH
+        - AttributeName: timestamp-unique
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+
+Outputs:
+  BaseUrl:
+    Description: "API Gateway endpoint URL for Prod stage for API Gateway Multi-Origin CORS function"
+    Value: !Sub "https://${AnalyticsApiGateway}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
