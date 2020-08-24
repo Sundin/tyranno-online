@@ -7,8 +7,19 @@
 <script>
 /* eslint-disable max-len */
 
-const iOS = false;
 
+function iOS() {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod',
+  ].includes(navigator.platform)
+  // iPad on iOS 13 detection
+  || (navigator.userAgent.includes('Mac') && 'ontouchend' in document);
+}
 
 const store = {
   debug: true,
@@ -42,7 +53,7 @@ export default {
     window.addEventListener('beforeunload', this.endSession);
     window.addEventListener('unload', this.endSession);
     // for iOS when the focus leaves the tab
-    if (iOS) {
+    if (iOS()) {
       window.addEventListener('blur', this.endSession);
     }
   },
@@ -51,7 +62,7 @@ export default {
     window.removeEventListener('pagehide', this.endSession);
     window.removeEventListener('beforeunload', this.endSession);
     window.removeEventListener('unload', this.endSession);
-    if (iOS) {
+    if (iOS()) {
       window.removeEventListener('blur', this.endSession);
     }
   },
@@ -95,7 +106,7 @@ export default {
 
       // Instead, send an async request
       // Except for iOS :(
-      const async = !iOS;
+      const async = !iOS();
       const request = new XMLHttpRequest();
       request.open('POST', url, async); // 'false' makes the request synchronous
       request.setRequestHeader('Content-Type', 'application/json');
