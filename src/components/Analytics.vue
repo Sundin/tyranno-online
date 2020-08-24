@@ -59,6 +59,10 @@ export default {
     endSession() {
       console.log('end session');
 
+      if (window.location.hostname === 'localhost') {
+        return;
+      }
+
       // skip if the function has already been called
       if (store.state.skip) {
         return;
