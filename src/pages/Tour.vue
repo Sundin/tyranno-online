@@ -18,6 +18,18 @@ import GigEntry from '../components/Gig.vue';
 
 const gigs = [
   {
+    date: '2020-11-14',
+    location: 'Plan B, Malmö, Sweden',
+  },
+  {
+    date: '2020-11-27',
+    location: 'Bomber Bar, Motala, Sweden',
+  },
+  {
+    date: '2020-11-28',
+    location: 'Almenäs, Nässjö, Sweden',
+  },
+  {
     date: '2020-04-17',
     location: 'The Abyss, Gothenburg, Sweden',
     comment: 'With Ambush',

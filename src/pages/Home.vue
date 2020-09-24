@@ -13,6 +13,17 @@ import NewsEntry from '../components/NewsEntry.vue';
 
 const news = [
   {
+    heading: 'Upcoming Album And Live Gigs!',
+    date: '2020-09-20',
+    body: `Greetings Marauders! 
+    You haven't heard from us in a while... 
+    That is because we have been busy writing our new album! 
+    It will be a concept album and will be recorded early next year.
+    To wet your appetite though, we have decided to do a small tour this November and play the upcoming album in its enterity!!!
+    Go to the <a href="https://www.armory.se/tour">TOUR</a> section to see all the upcoming dates.
+    Stay fast!`,
+  },
+  {
     heading: 'A Message From Space',
     date: '2020-04-10',
     body: `Unfortunately but not surprisingly our gig at The Abyss together with Ambush has been postponed to an unknown date.
