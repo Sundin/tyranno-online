@@ -13,6 +13,23 @@ import NewsEntry from '../components/NewsEntry.vue';
 
 const news = [
   {
+    heading: 'Show With Darkness Rescheduled',
+    date: '2020-11-20',
+    body: `We have our first gig for 2022 already secured.
+    It's the show together with thrash legends Darkness in Jönköping,
+    that was originally planned to take place in April 2020, 
+    that has now been rescheduled to January 2022.`,
+  },
+  {
+    heading: 'New Restrictions',
+    date: '2020-11-16',
+    body: `Thanks for the wild night in Malmö last Saturday, Marauders!
+    The city will probably take a long time to rebuild again.
+    Unfortunately our upcoming shows in Motala and Nässjö will have to be 
+    cancelled/postponed due to the new and stricter restrictions from the Swedish government.
+    We will let you know as soon as the restrictions are lifted again. We will return!`,
+  },
+  {
     heading: 'Upcoming Album And Live Gigs!',
     date: '2020-09-20',
     body: `Greetings Marauders! 

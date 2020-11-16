@@ -18,16 +18,22 @@ import GigEntry from '../components/Gig.vue';
 
 const gigs = [
   {
+    date: '2020-12-05',
+    location: 'Skyddsrummet Tolered, Hisingen, Sweden',
+  },
+  {
+    date: '2020-11-28',
+    location: 'Almenäs, Nässjö, Sweden',
+    cancelled: true,
+  },
+  {
     date: '2020-11-14',
     location: 'Plan B, Malmö, Sweden',
   },
   {
     date: '2020-11-27',
     location: 'Bomber Bar, Motala, Sweden',
-  },
-  {
-    date: '2020-11-28',
-    location: 'Almenäs, Nässjö, Sweden',
+    cancelled: true,
   },
   {
     date: '2020-04-17',
@@ -36,10 +42,9 @@ const gigs = [
     cancelled: true,
   },
   {
-    date: '2020-04-04',
+    date: '2022-01-15',
     location: 'Klubb Dissonans, Jönköping, Sweden',
     comment: 'Opening for DARKNESS',
-    cancelled: true,
   },
   {
     date: '2019-06-28',
@@ -192,10 +197,14 @@ export default {
   },
   methods: {
     getUpcomingGigs() {
-      return gigs.filter((gig) => new Date(gig.date) >= today);
+      return gigs
+        .filter((gig) => new Date(gig.date) >= today)
+        .sort((a, b) => new Date(a.date) - new Date(b.date));
     },
     getPastGigs() {
-      return gigs.filter((gig) => new Date(gig.date) < today);
+      return gigs
+        .filter((gig) => new Date(gig.date) < today)
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
     },
   },
 };
