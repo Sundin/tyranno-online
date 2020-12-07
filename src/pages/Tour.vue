@@ -20,6 +20,7 @@ const gigs = [
   {
     date: '2020-12-05',
     location: 'Skyddsrummet Tolered, Hisingen, Sweden',
+    cancelled: true,
   },
   {
     date: '2020-11-28',

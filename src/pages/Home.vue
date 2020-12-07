@@ -13,12 +13,21 @@ import NewsEntry from '../components/NewsEntry.vue';
 
 const news = [
   {
+    heading: 'Support the underground',
+    date: '2020-12-07',
+    body: `Unfortunately all gigs except the first one of our Solar System 2020 Tour 
+    had to be cancelled/postponed, as you already know. 
+    Support underground speed metal by purchasing the tour shirt anyway at 
+    <a href="https://www.jawbreaker.se/product/armory-2020-tour-t-shirt/">Jawbreaker.se</a>!`,
+  },
+  {
     heading: 'Show With Darkness Rescheduled',
     date: '2020-11-20',
     body: `We have our first gig for 2022 already secured.
     It's the show together with thrash legends Darkness in Jönköping,
     that was originally planned to take place in April 2020, 
-    that has now been rescheduled to January 2022.`,
+    that has now been rescheduled to January 2022. 
+    (We are in the big league now, booking gigs over a year in advance).`,
   },
   {
     heading: 'New Restrictions',
