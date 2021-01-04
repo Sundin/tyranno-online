@@ -13,6 +13,16 @@ import NewsEntry from '../components/NewsEntry.vue';
 
 const news = [
   {
+    heading: 'Space Marauders 2021',
+    date: '2021-01-04',
+    body: `The 2021 edition of our fanclub, the SPACE MARAUDERS, is now open for registration.
+    Like always, you will get some very exclusive merch as thanks for joining,
+    and you will also continue to support underground speed metal!
+    Your membership will be extra valuable this year, as we will enter Black Path Studios very soon
+    in order to record our next album.
+    Head over to the <a href="https://www.armory.se/fanclub">FANCLUB</a> section to read more.`,
+  },
+  {
     heading: 'Support the underground',
     date: '2020-12-07',
     body: `Unfortunately all gigs except the first one of our Solar System 2020 Tour 
