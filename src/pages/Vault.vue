@@ -1,7 +1,12 @@
 <template>
   <main-layout>
     <div v-if="hasAccess">
-      <vault-2020/>
+      <div v-if="chosenYear === 2019">
+        <vault-2019/>
+      </div>
+      <div v-if="chosenYear === 2020">
+        <vault-2020/>
+      </div>
     </div>
     <div v-else-if="chosenYear === null">
       <h1>Welcome to Vault Seven</h1>
@@ -32,11 +37,13 @@
 
 <script>
 import MainLayout from '../layouts/Main.vue';
+import Vault2019 from '../components/Vault2019.vue';
 import Vault2020 from '../components/Vault2020.vue';
 
 const vault = {
   components: {
     MainLayout,
+    Vault2019,
     Vault2020,
   },
   methods: {
