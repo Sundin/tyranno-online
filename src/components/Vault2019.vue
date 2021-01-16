@@ -1,5 +1,5 @@
 <template>
-  <div class="vault-2020">
+  <div class="vault-2019">
       <h1>Greetings Space Marauder!</h1>
       <h2>2019</h2>
       <p>

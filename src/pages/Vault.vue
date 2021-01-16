@@ -7,6 +7,9 @@
       <div v-if="chosenYear === 2020">
         <vault-2020/>
       </div>
+      <div v-if="chosenYear === 2021">
+        <vault-2021/>
+      </div>
     </div>
     <div v-else-if="chosenYear === null">
       <h1>Welcome to Vault Seven</h1>
@@ -39,12 +42,14 @@
 import MainLayout from '../layouts/Main.vue';
 import Vault2019 from '../components/Vault2019.vue';
 import Vault2020 from '../components/Vault2020.vue';
+import Vault2021 from '../components/Vault2021.vue';
 
 const vault = {
   components: {
     MainLayout,
     Vault2019,
     Vault2020,
+    Vault2021,
   },
   methods: {
     selectYear(year) {
@@ -62,7 +67,7 @@ const vault = {
       const normalizedPassword = this.pw.toLowerCase().trim();
       switch (this.chosenYear) {
         case 2021:
-          return this.hashCode(normalizedPassword) === 666;
+          return this.hashCode(normalizedPassword) === -1153224625;
         case 2019:
         case 2020:
         default:
