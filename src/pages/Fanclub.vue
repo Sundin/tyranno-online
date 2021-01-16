@@ -15,8 +15,12 @@
       >Click here to join the fanclub!</a>
     </h3>
 
+    <p>
+      In this image you can see some of the gifts we have sent out
+      to all fanclub members during the past years:
+      </p>
     <a href="https://www.jawbreaker.se/product/space-marauders-membership/">
-      <img src="../assets/space_marauders_2019.jpg" />
+      <img src="../assets/fanclub_merch.jpg" />
     </a>
   </main-layout>
 </template>

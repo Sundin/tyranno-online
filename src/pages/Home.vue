@@ -19,7 +19,7 @@ const news = [
     Like always, you will get some very exclusive merch as thanks for joining,
     and you will also continue to support underground speed metal!
     Your membership will be extra valuable this year, as we will enter Black Path Studios very soon
-    in order to record our next album.
+    in order to record our next album. Therefore we need all the funds we can get.
     Head over to the <a href="https://www.armory.se/fanclub">FANCLUB</a> section to read more.`,
   },
   {
