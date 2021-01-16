@@ -3,6 +3,15 @@
     <div v-if="hasAccess">
       <vault-2020/>
     </div>
+    <div v-else-if="chosenYear === null">
+      <h1>Welcome to Vault Seven</h1>
+      <p>Chose the year for which your password is valid:</p>
+      <p>
+        <button v-on:click="selectYear(2019)">2019</button>
+        <button v-on:click="selectYear(2020)">2020</button>
+        <button v-on:click="selectYear(2021)">2021</button>
+      </p>
+    </div>
     <div v-else>
       <h1>Welcome to Vault Seven</h1>
       <p>To access the Vault, enter the secret of steel:</p>
@@ -31,6 +40,9 @@ const vault = {
     Vault2020,
   },
   methods: {
+    selectYear(year) {
+      this.chosenYear = year;
+    },
     enterVault() {
       this.wrongPassword = !this.correctPassword();
       const self = this;
@@ -41,7 +53,14 @@ const vault = {
     },
     correctPassword() {
       const normalizedPassword = this.pw.toLowerCase().trim();
-      return this.hashCode(normalizedPassword) === 1642731934;
+      switch (this.chosenYear) {
+        case 2021:
+          return this.hashCode(normalizedPassword) === 666;
+        case 2019:
+        case 2020:
+        default:
+          return this.hashCode(normalizedPassword) === 1642731934;
+      }
     },
     hashCode(str) {
       /* eslint no-bitwise: 0 */
@@ -58,6 +77,7 @@ const vault = {
       pw: '',
       enterButtonPressed: false,
       wrongPassword: false,
+      chosenYear: null,
     };
   },
   computed: {
