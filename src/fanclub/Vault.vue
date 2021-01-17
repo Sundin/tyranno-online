@@ -32,7 +32,12 @@
         v-on:keyup.enter="enterVault()"
       />
       <p>
-        <button v-on:click="enterVault()">ENTER THE VAULT</button>
+        <button
+          v-on:click="enterVault()"
+          v-bind:class="{ validPassword: validPasswordEntered }"
+        >
+          ENTER THE VAULT
+        </button>
       </p>
     </div>
   </main-layout>
@@ -96,6 +101,9 @@ const vault = {
     hasAccess() {
       return this.enterButtonPressed && this.correctPassword();
     },
+    validPasswordEntered() {
+      return this.correctPassword();
+    },
   },
 };
 
@@ -114,6 +122,7 @@ input {
 
 .wrongPassword {
   border: 2px solid #ff0000;
+  color: #ff0000;
   animation-name: blinker;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -144,7 +153,20 @@ button {
   transition: 0.3s;
 }
 
+button.validPassword {
+    border: 2px solid #00ce1c;
+    color: #00ce1c;
+    animation-name: blinker;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-delay: infinite;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    opacity: 1;
+  }
+
 button:hover {
   opacity: 1;
+  background-color: #6a0000;
 }
 </style>
