@@ -28,6 +28,7 @@ export default {
   --text-color: #0ebe08;
   --link-color: #be3c08;
   --hover-color: #ffffff;
+  font-size: 150%;
 }
 
 body,

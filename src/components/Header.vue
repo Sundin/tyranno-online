@@ -26,6 +26,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+
 .navbar {
   width: 100%;
   overflow: auto;
@@ -36,18 +38,11 @@ export default {
   max-width: 90%;
 }
 
-@media screen and (max-width: 600px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
-
 .navbar a {
   color: var(--text-color);
   padding: 0 20px;
   font-family: Impact, Georgia, serif;
-  font-size: 30px;
+  font-size: 200%;
   font-weight: bold;
   float: center;
 }
@@ -58,4 +53,13 @@ export default {
 .navbar a:hover {
   color: var(--hover-color);
 }
+
+@media screen and (max-width: 600px) {
+  .navbar a {
+    float: none;
+    display: block;
+    font-size: 30px;
+  }
+}
+
 </style>
