@@ -22,6 +22,10 @@
     <a href="https://www.jawbreaker.se/product/space-marauders-membership/">
       <img src="../assets/fanclub_merch.jpg" />
     </a>
+
+    <p>
+      Already a member? <a href="/vault7">Click here to enter the restricted fanclub area.</a>
+    </p>
   </main-layout>
 </template>
 
