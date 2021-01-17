@@ -9,7 +9,7 @@
 
 <script>
 import MainLayout from '../layouts/Main.vue';
-import NewsEntry from '../components/NewsEntry.vue';
+import NewsEntry from './NewsEntry.vue';
 
 const news = [
   {

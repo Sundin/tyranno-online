@@ -14,7 +14,7 @@
 
 <script>
 import MainLayout from '../layouts/Main.vue';
-import GigEntry from '../components/Gig.vue';
+import GigEntry from './Gig.vue';
 
 const gigs = [
   {

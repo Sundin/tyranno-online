@@ -1,9 +1,9 @@
-import Home from './pages/Home.vue';
+import Home from './home/Home.vue';
 import About from './pages/About.vue';
-import Tour from './pages/Tour.vue';
-import Fanclub from './pages/Fanclub.vue';
+import Tour from './tour/Tour.vue';
+import Fanclub from './fanclub/Fanclub.vue';
 import Merch from './pages/Merch.vue';
-import Vault from './pages/Vault.vue';
+import Vault from './fanclub/Vault.vue';
 
 const routes = {
   '/': Home,

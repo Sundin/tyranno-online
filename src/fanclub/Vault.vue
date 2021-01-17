@@ -40,9 +40,9 @@
 
 <script>
 import MainLayout from '../layouts/Main.vue';
-import Vault2019 from '../components/Vault2019.vue';
-import Vault2020 from '../components/Vault2020.vue';
-import Vault2021 from '../components/Vault2021.vue';
+import Vault2019 from './Vault2019.vue';
+import Vault2020 from './Vault2020.vue';
+import Vault2021 from './Vault2021.vue';
 
 const vault = {
   components: {
