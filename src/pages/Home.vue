@@ -20,7 +20,7 @@ const news = [
     and you will also continue to support underground speed metal!
     Your membership will be extra valuable this year, as we will enter Black Path Studios very soon
     in order to record our next album. Therefore we need all the funds we can get.
-    Head over to the <a href="https://www.armory.se/fanclub">FANCLUB</a> section to read more.`,
+    Head over to the <a href="/fanclub">FANCLUB</a> section to read more.`,
   },
   {
     heading: 'Support the underground',
@@ -56,7 +56,7 @@ const news = [
     That is because we have been busy writing our new album! 
     It will be a concept album and will be recorded early next year.
     To wet your appetite though, we have decided to do a small tour this November and play the upcoming album in its enterity!!!
-    Go to the <a href="https://www.armory.se/tour">TOUR</a> section to see all the upcoming dates.
+    Go to the <a href="/tour">TOUR</a> section to see all the upcoming dates.
     Stay fast!`,
   },
   {
