@@ -21,6 +21,7 @@
         <source src="../assets/A Message From The Stars (Demo).mp3" type="audio/mpeg" controls />
         Your browser does not support the audio element.
       </audio>
+      <img src="../assets/armory_glitch.jpg" />
       <p>ARMORY
         <br />January 16th, 2021, Earth
       </p>
