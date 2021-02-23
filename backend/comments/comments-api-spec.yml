@@ -42,8 +42,10 @@ paths:
                           {
                             "comments": [
                               #foreach($elem in $inputRoot.Items) {
-                                "id": "$elem.pageId.S",
+                                "pageId": "$elem.pageId.S",
                                 "timestampUnique": "$elem.timestampUnique.S",
+                                "comment": "$elem.comment.S",
+                                "name": "$elem.name.S",
                               }#if($foreach.hasNext),#end
                               #end
                             ]
