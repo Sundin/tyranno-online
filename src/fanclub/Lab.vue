@@ -4,7 +4,10 @@
     <p>
       TOP SECRET!
     </p>
-    <Comment name="GG" comment="tjena alla"/>
+    <div v-for="item in this.comments" v-bind:key="item.timestampUnique">
+      <Comment v-bind:item="item"/>
+    </div>
+
   </main-layout>
 </template>
 
@@ -19,12 +22,14 @@ export default {
     MainLayout,
     Comment,
   },
+  data() {
+    return { comments: '' };
+  },
   created() {
     console.log('make request');
     axios.get('https://imgtv0cop5.execute-api.eu-west-1.amazonaws.com/Prod/comments/test777')
       .then((response) => {
-        // handle success
-        console.log(response);
+        this.comments = response.data.comments;
       })
       .catch((error) => {
         // handle error

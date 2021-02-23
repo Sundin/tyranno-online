@@ -1,8 +1,8 @@
 
 <template>
   <div>
-    <h2>{{name}}</h2>
-    <p>{{comment}}</p>
+    <h2>{{item.name}}</h2>
+    <p>{{item.comment}}</p>
     <slot></slot>
   </div>
 </template>
@@ -11,12 +11,8 @@
 
 export default {
   props: {
-    comment: {
-      type: String,
-      required: true,
-    },
-    name: {
-      type: String,
+    item: {
+      type: Object,
       required: true,
     },
   },
