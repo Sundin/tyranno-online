@@ -60,9 +60,7 @@ Resources:
           KeyType: HASH
         - AttributeName: timestamp-unique
           KeyType: RANGE
-      ProvisionedThroughput:
-        ReadCapacityUnits: 5
-        WriteCapacityUnits: 5
+      BillingMode: PAY_PER_REQUEST
 
 Outputs:
   BaseUrl:

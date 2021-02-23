@@ -1,0 +1,65 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  CommentsApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      DefinitionBody:
+        'Fn::Transform':
+          Name: AWS::Include
+          Parameters:
+            Location: 's3://armory-online/comments-api-spec.yml'
+      Cors:
+        AllowMethods: "'GET,POST,OPTIONS'"
+        AllowHeaders: "'*'"
+        AllowOrigin: "'*'"
+        AllowCredentials: "'*'"
+
+  CommentsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: pageId
+          AttributeType: S
+        - AttributeName: timestampUnique
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pageId
+          KeyType: HASH
+        - AttributeName: timestampUnique
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+
+  CommentsAPIRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - apigateway.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Policies:
+        - PolicyName: CommentsAPIPolicy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "dynamodb:PutItem"
+                  - "dynamodb:UpdateItem"
+                  - "dynamodb:DeleteItem"
+                  - "dynamodb:GetItem"
+                  - "dynamodb:Scan"
+                  - "dynamodb:Query"
+                Resource: !GetAtt CommentsTable.Arn
+
+Outputs:
+  BaseUrl:
+    Description: "API Gateway endpoint URL for Prod stage for API Gateway Multi-Origin CORS function"
+    Value: !Sub "https://${CommentsApiGateway}.execute-api.${AWS::Region}.amazonaws.com/Prod/"

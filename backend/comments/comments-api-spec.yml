@@ -1,0 +1,141 @@
+openapi: 3.0.1
+info:
+  title:
+    armory-comments
+  version: 1.0.0
+paths:
+  /comments/{pageId}:
+    get:
+      responses:
+        200:
+          description: The request succeded and results are in the response message.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/responses/Comment"
+      x-amazon-apigateway-integration:
+        httpMethod: POST
+        type: AWS
+        uri: { "Fn::Sub": "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query" }
+        credentials: { "Fn::GetAtt": [ CommentsAPIRole, Arn ] }
+        requestTemplates:
+          application/json:
+            Fn::Sub:
+              - |-
+                {
+                  "TableName": "${tableName}",
+                  "KeyConditionExpression": "pageId = :v1",
+                  "ExpressionAttributeValues": {
+                      ":v1": {
+                          "S": "$input.params('pageId')"
+                      }
+                  }
+                }
+              - { tableName: { Ref: CommentsTable } }
+        responses:
+          default:
+            statusCode: 200
+            responseTemplates:
+              application/json: '#set($inputRoot = $input.path("$"))
+                          {
+                            "comments": [
+                              #foreach($elem in $inputRoot.Items) {
+                                "id": "$elem.pageId.S",
+                                "timestampUnique": "$elem.timestampUnique.S",
+                              }#if($foreach.hasNext),#end
+                              #end
+                            ]
+                          }'
+
+    post:
+      responses:
+        201:
+          $ref: "#/components/responses/Created"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Comment'
+      x-amazon-apigateway-integration:
+        httpMethod: POST
+        type: AWS
+        uri: { "Fn::Sub": "arn:aws:apigateway:${AWS::Region}:dynamodb:action/PutItem" }
+        credentials: { "Fn::GetAtt": [ CommentsAPIRole, Arn ] }
+        requestTemplates:
+          application/json: 
+            Fn::Sub:
+              - |- 
+                { 
+                  "TableName": "${tableName}",
+                  "Item": {
+                    "pageId": {
+                      "S": "$input.params('pageId')"
+                    },
+                    "timestampUnique": {
+                      "S": "$input.path("$.timestampUnique")"
+                    },
+                    "name": {
+                      "S": "$input.path("$.name")"
+                    },
+                    "comment": {
+                      "S": "$input.path("$.comment")"
+                    },
+                  }
+                }
+              - { tableName: { Ref: CommentsTable } }
+        responses:
+          default:
+            statusCode: 201
+            responseTemplates:
+              application/json: '#set($inputRoot = $input.path("$"))
+                {
+                    "id": "$context.requestId"
+                }'
+
+components:
+  schemas:
+    Empty:
+      type: object
+      description: Empty Schema
+    Comment:
+      type: object
+      description: Comment
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+  responses:
+    Created: #201
+      description: The request succeeded and created a new resource.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+            required:
+              - id
+    Empty:
+      description: Empty Schema
+      content:
+        application/json:
+          schema:
+            type: object
+
+    Comment:
+      description: Comment
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - name
+            properties:
+              id:
+                type: string
+              name:
+                type: string
