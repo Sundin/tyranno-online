@@ -76,12 +76,12 @@ paths:
                     "timestampUnique": {
                       "S": "$input.path("$.timestampUnique")"
                     },
-                    "name": {
-                      "S": "$input.path("$.name")"
-                    },
                     "comment": {
                       "S": "$input.path("$.comment")"
                     },
+                    "name": {
+                      "S": "$input.path("$.name")"
+                    }
                   }
                 }
               - { tableName: { Ref: CommentsTable } }
