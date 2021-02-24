@@ -1,7 +1,7 @@
 
 <template>
-  <div>
-    <h2>{{item.name}}</h2>
+  <div class="comment">
+    <h2>{{item.name}}:</h2>
     <p>{{item.comment}}</p>
     <slot></slot>
   </div>
@@ -30,7 +30,17 @@ export default {
 </script>
 
 <style scoped>
-.active {
-  color: cornflowerblue;
+div.comment {
+  background-color: #472000;
+  color: var(--text-color);
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid var(--text-color);
+  padding: px 5px;
+  margin: 15px 15px;
+  font-family: Georgia, serif;
+  outline: none;
+  opacity: 0.8;
 }
 </style>

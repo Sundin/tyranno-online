@@ -4,8 +4,11 @@
     <p>
       TOP SECRET!
     </p>
-    <div v-for="item in this.comments" v-bind:key="item.timestampUnique">
-      <Comment v-bind:item="item"/>
+    <NewCommentField/>
+    <div  class="comments">
+        <div v-for="item in this.comments" v-bind:key="item.timestampUnique">
+            <Comment v-bind:item="item"/>
+        </div>
     </div>
 
   </main-layout>
@@ -14,6 +17,7 @@
 <script>
 import MainLayout from '../layouts/Main.vue';
 import Comment from './commentsView/Comment.vue';
+import NewCommentField from './commentsView/NewCommentField.vue';
 
 const axios = require('axios').default;
 
@@ -21,6 +25,7 @@ export default {
   components: {
     MainLayout,
     Comment,
+    NewCommentField,
   },
   data() {
     return { comments: '' };
@@ -38,3 +43,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+div.comments {
+    background-color: #004114;
+    display: flex;
+    flex-direction: column;
+}
+
+</style>
