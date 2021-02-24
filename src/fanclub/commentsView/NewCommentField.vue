@@ -20,7 +20,27 @@
 <script>
 const axios = require('axios').default;
 
+function randomId() {
+/* eslint-disable no-bitwise */
+/* eslint-disable no-mixed-operators */
+  return 'xxxxxxxx'.replace(/[xy]/g, (c) => {
+    const r = Math.random() * 16 | 0; const
+      v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+function generateTimestampUnique() {
+  return `${Date.now()}-${randomId()}`;
+}
+
 export default {
+  props: {
+    pageId: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       name: '',
@@ -31,10 +51,10 @@ export default {
   methods: {
     submit() {
       console.log('hej', this.name);
-      axios.post('https://imgtv0cop5.execute-api.eu-west-1.amazonaws.com/Prod/comments/test777', {
+      axios.post(`https://imgtv0cop5.execute-api.eu-west-1.amazonaws.com/Prod/comments/${this.pageId}`, {
         name: this.name,
         comment: this.comment,
-        timestampUnique: '666',
+        timestampUnique: generateTimestampUnique(),
       })
         .then((response) => {
           console.log(response);

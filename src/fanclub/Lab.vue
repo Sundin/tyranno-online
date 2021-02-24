@@ -4,7 +4,8 @@
     <p>
       TOP SECRET!
     </p>
-    <NewCommentField/>
+    <NewCommentField pageId="test777"/>
+    <h2>Comments:</h2>
     <div  class="comments">
         <div v-for="item in this.comments" v-bind:key="item.timestampUnique">
             <Comment v-bind:item="item"/>
