@@ -2,7 +2,9 @@
 <template>
   <div class="comment">
     <h2>{{item.name}}:</h2>
-    <p>{{item.comment}}</p>
+    <p>
+      <span v-html="item.comment"></span>
+    </p>
     <slot></slot>
   </div>
 </template>

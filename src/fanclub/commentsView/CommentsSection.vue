@@ -3,14 +3,14 @@
   <div>
     <div class="new-comment">
       <h2>Leave a comment</h2>
-      <p>
-        Name:
-        <input v-model="name" placeholder="Your name" />
-      </p>
-      <p>
-        Comment:
-        <textarea v-model="comment" placeholder="Write your comment here" />
-      </p>
+      Name:
+      <br />
+      <input v-model="name" placeholder="Your name" />
+      <p />
+      Comment:
+      <br />
+      <textarea v-model="comment" placeholder="Write your comment here" />
+
       <p>
         <button v-on:click="submit()">Submit</button>
       </p>
@@ -64,9 +64,11 @@ export default {
     };
   },
   created() {
-    axios.get(`${BASE_URL}/${this.pageId}`)
+    axios
+      .get(`${BASE_URL}/${this.pageId}`)
       .then((response) => {
         this.comments = response.data.comments;
+        console.log(response.data.comments);
       })
       .catch((error) => {
         console.log(error);
@@ -74,28 +76,31 @@ export default {
   },
   computed: {
     sortedComments() {
-      return this.comments.slice().sort((a, b) => (
-        (a.timestampUnique < b.timestampUnique) ? 1 : -1));
+      return this.comments
+        .slice()
+        .sort((a, b) => (a.timestampUnique < b.timestampUnique ? 1 : -1));
     },
   },
   methods: {
     submit() {
       const newComment = {
         name: this.name,
-        comment: this.comment,
+        comment: this.comment
+          .replaceAll('\n', '<br/>')
+          .replaceAll('\r', '<br/>'),
         timestampUnique: generateTimestampUnique(),
       };
 
       this.comments.push(newComment);
 
-      axios.post(
-        `${BASE_URL}/${this.pageId}`,
-        newComment,
-      ).then((response) => {
-        console.log(response);
-      }).catch((error) => {
-        console.log(error);
-      });
+      axios
+        .post(`${BASE_URL}/${this.pageId}`, newComment)
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 };
@@ -104,6 +109,9 @@ export default {
 <style scoped>
 div.new-comment {
   background-color: #004114;
+  border: 2px solid var(--text-color);
+  max-width: 666px;
+  margin: 0 auto;
 }
 input,
 textarea {
@@ -113,10 +121,18 @@ textarea {
   text-align: center;
   border: 2px solid var(--text-color);
   outline: none;
+  width: 80%;
+}
+textarea {
+  margin: 0 auto;
+  height: 200px;
 }
 div.comments {
-    background-color: #004114;
-    display: flex;
-    flex-direction: column;
+  background-color: #004114;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--text-color);
+  max-width: 666px;
+  margin: 0 auto;
 }
 </style>
