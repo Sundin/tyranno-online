@@ -137,36 +137,15 @@ input {
   }
 }
 
-button {
-  background-color: #410000;
-  color: var(--text-color);
-  font-size: 18px;
-  text-align: center;
-  border-radius: 5px;
-  border: 2px solid var(--text-color);
-  padding: 10px 25px;
-  margin: 0px 15px;
-  font-family: Georgia, serif;
-  cursor: pointer;
-  outline: none;
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
 button.validPassword {
-    border: 2px solid #00ce1c;
-    color: #00ce1c;
-    animation-name: blinker;
-    animation-duration: 0.4s;
-    animation-timing-function: linear;
-    animation-delay: infinite;
-    animation-iteration-count: 1;
-    animation-direction: alternate;
-    opacity: 1;
-  }
-
-button:hover {
+  border: 2px solid #00ce1c;
+  color: #00ce1c;
+  animation-name: blinker;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-delay: infinite;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
   opacity: 1;
-  background-color: #6a0000;
 }
 </style>

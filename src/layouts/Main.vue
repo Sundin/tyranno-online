@@ -93,4 +93,24 @@ hr {
 span.title {
   font-style: italic;
 }
+
+button {
+  background-color: #410000;
+  color: var(--text-color);
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid var(--text-color);
+  padding: 10px 25px;
+  margin: 0px 15px;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+button:hover {
+  opacity: 1;
+  background-color: #6a0000;
+}
 </style>
