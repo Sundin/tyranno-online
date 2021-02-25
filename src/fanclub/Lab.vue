@@ -4,52 +4,19 @@
     <p>
       TOP SECRET!
     </p>
-    <NewCommentField pageId="test777"/>
-    <h2>Comments:</h2>
-    <div  class="comments">
-        <div v-for="item in this.comments" v-bind:key="item.timestampUnique">
-            <Comment v-bind:item="item"/>
-        </div>
-    </div>
+    <CommentsSection pageId="test777"/>
 
   </main-layout>
 </template>
 
 <script>
 import MainLayout from '../layouts/Main.vue';
-import Comment from './commentsView/Comment.vue';
-import NewCommentField from './commentsView/NewCommentField.vue';
-
-const axios = require('axios').default;
+import CommentsSection from './commentsView/CommentsSection.vue';
 
 export default {
   components: {
     MainLayout,
-    Comment,
-    NewCommentField,
-  },
-  data() {
-    return { comments: '' };
-  },
-  created() {
-    console.log('make request');
-    axios.get('https://imgtv0cop5.execute-api.eu-west-1.amazonaws.com/Prod/comments/test777')
-      .then((response) => {
-        this.comments = response.data.comments;
-      })
-      .catch((error) => {
-        // handle error
-        console.log(error);
-      });
+    CommentsSection,
   },
 };
 </script>
-
-<style scoped>
-div.comments {
-    background-color: #004114;
-    display: flex;
-    flex-direction: column;
-}
-
-</style>

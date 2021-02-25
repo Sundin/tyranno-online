@@ -48,7 +48,6 @@ export default {
     store.pushEvent(window.location.pathname);
   },
   created() {
-    console.log('created');
     window.addEventListener('pagehide', this.endSession);
     window.addEventListener('beforeunload', this.endSession);
     window.addEventListener('unload', this.endSession);
@@ -58,7 +57,6 @@ export default {
     }
   },
   destroyed() {
-    console.log('destroyed');
     window.removeEventListener('pagehide', this.endSession);
     window.removeEventListener('beforeunload', this.endSession);
     window.removeEventListener('unload', this.endSession);
@@ -68,8 +66,6 @@ export default {
   },
   methods: {
     endSession() {
-      console.log('end session');
-
       if (window.location.hostname === 'localhost') {
         return;
       }
