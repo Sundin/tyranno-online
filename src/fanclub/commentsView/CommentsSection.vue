@@ -51,10 +51,6 @@ function randomId() {
   });
 }
 
-function generateTimestampUnique() {
-  return `${Date.now()}-${randomId()}`;
-}
-
 const BASE_URL = 'https://imgtv0cop5.execute-api.eu-west-1.amazonaws.com/Prod/comments';
 
 export default {
@@ -108,12 +104,14 @@ export default {
         return;
       }
 
+      const timestamp = Date.now();
       const newComment = {
         name: this.name,
         comment: this.comment
           .replaceAll('\n', '<br/>')
           .replaceAll('\r', '<br/>'),
-        timestampUnique: generateTimestampUnique(),
+        timestampUnique: `${timestamp}-${randomId()}`,
+        createdAt: timestamp,
       };
 
       this.comments.push(newComment);

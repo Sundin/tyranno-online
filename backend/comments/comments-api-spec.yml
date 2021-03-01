@@ -59,7 +59,8 @@ paths:
                                 "pageId": "$elem.pageId.S",
                                 "timestampUnique": "$elem.timestampUnique.S",
                                 "comment": "$elem.comment.S",
-                                "name": "$elem.name.S"
+                                "name": "$elem.name.S",
+                                "createdAt": $elem.createdAt.N
                               }#if($foreach.hasNext),#end
                               #end
                             ]
@@ -97,6 +98,9 @@ paths:
                     },
                     "name": {
                       "S": "$input.path("$.name")"
+                    },
+                    "createdAt": {
+                      "N": "$input.path("$.createdAt")"
                     }
                   }
                 }
