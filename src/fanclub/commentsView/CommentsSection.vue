@@ -2,21 +2,29 @@
 <template>
   <div>
     <div class="new-comment">
-      <h2>Leave a comment</h2>
+      <h3>Leave a comment</h3>
       Name:
       <br />
-      <input v-model="name" placeholder="Your name" />
+      <input
+        v-model="name"
+        placeholder="Your name"
+        v-bind:class="{ invalidInput: invalidName }"
+      />
       <p />
       Comment:
       <br />
-      <textarea v-model="comment" placeholder="Write your comment here" />
+      <textarea
+        v-model="comment"
+        placeholder="Write your comment here"
+        v-bind:class="{ invalidInput: invalidComment }"
+      />
 
       <p>
         <button v-on:click="submit()">Submit</button>
       </p>
       <slot></slot>
     </div>
-    <h2>Comments:</h2>
+    <h3>Comments:</h3>
     <div class="comments">
       <div v-for="item in sortedComments" v-bind:key="item.timestampUnique">
         <Comment v-bind:item="item" />
@@ -61,6 +69,8 @@ export default {
       name: '',
       comment: '',
       comments: [],
+      invalidName: false,
+      invalidComment: false,
     };
   },
   created() {
@@ -83,6 +93,17 @@ export default {
   },
   methods: {
     submit() {
+      this.invalidName = this.name === '';
+      this.invalidComment = this.comment === '';
+      const self = this;
+      setTimeout(() => {
+        self.invalidName = false;
+        self.invalidComment = false;
+      }, 1500);
+      if (this.invalidName || this.invalidComment) {
+        return;
+      }
+
       const newComment = {
         name: this.name,
         comment: this.comment
@@ -134,5 +155,20 @@ div.comments {
   border: 2px solid var(--text-color);
   max-width: 666px;
   margin: 0 auto;
+}
+.invalidInput {
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  animation-name: blinker;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-delay: infinite;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 </style>

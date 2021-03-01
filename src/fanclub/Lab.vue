@@ -1,6 +1,6 @@
 <template>
   <main-layout>
-    <h1>Armory Experimentation Lab</h1>
+    <h3>Armory Experimentation Lab</h3>
     <p>
       TOP SECRET!
     </p>
