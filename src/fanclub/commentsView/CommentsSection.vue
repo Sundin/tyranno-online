@@ -1,7 +1,10 @@
 
 <template>
   <div>
-    <div class="new-comment">
+    <div v-if="commentPosted" class="new-comment">
+      <h3>Thanks for your comment!</h3>
+    </div>
+    <div v-else class="new-comment">
       <h3>Leave a comment</h3>
       Name:
       <br />
@@ -71,6 +74,7 @@ export default {
       comments: [],
       invalidName: false,
       invalidComment: false,
+      commentPosted: false,
     };
   },
   created() {
@@ -113,6 +117,7 @@ export default {
       };
 
       this.comments.push(newComment);
+      this.commentPosted = true;
 
       axios
         .post(`${BASE_URL}/${this.pageId}`, newComment)
