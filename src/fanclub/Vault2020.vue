@@ -29,30 +29,20 @@
       The membership card of 2020 is the circuit board from an actual UFO detector.
       You will find the instructions on how to use it to contruct your very own UFO detector here:
       </p>
-      <a href="/ufo_detector.pdf">UFO Detector instructions.pdf</a>
-      <h2>2019</h2>
       <p>
-        Without you our mission would be doomed to fail.
-        As a special token of our appreciation,
-        we would therefore like to give you something in return.
+        <a href="/ufo_detector.pdf">UFO Detector instructions.pdf</a>
       </p>
-      <p>
-      Below you will find an unreleased song entitled MIDNIGHT KILLER for your ears only.
-      It was recorded during the "The Search" sessions but ultimately left off the final album.
-      </p>
-      Enjoy and keep on speeding out there!
-      <br />
-      <br />
-      <audio controls>
-        <source src="../assets/Midnight_Killer.mp3" type="audio/mpeg" controls />
-        Your browser does not support the audio element.
-      </audio>
-      <p>ARMORY 2019</p>
+      <CommentsSection pageId="fanclub2020"/>
     </div>
 </template>
 
 <script>
+import CommentsSection from './commentsView/CommentsSection.vue';
+
 export default {
+  components: {
+    CommentsSection,
+  },
   name: 'Vault2020',
 };
 </script>

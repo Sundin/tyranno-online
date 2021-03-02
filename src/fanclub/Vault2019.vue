@@ -19,11 +19,17 @@
         Your browser does not support the audio element.
       </audio>
       <p>ARMORY 2019</p>
+      <CommentsSection pageId="fanclub2019"/>
     </div>
 </template>
 
 <script>
+import CommentsSection from './commentsView/CommentsSection.vue';
+
 export default {
+  components: {
+    CommentsSection,
+  },
   name: 'Vault2020',
 };
 </script>
