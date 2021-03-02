@@ -2,7 +2,8 @@
   <div>
       <h1>Greetings Space Marauder!</h1>
       <p>
-        Without you our mission would be doomed to fail.
+        Thank you for supporting the future of intergalactic underground speed metal!
+        With your support, it's a little easier to keep our operation running.
         As a special token of our appreciation,
         we would therefore like to give you something in return.
       </p>
