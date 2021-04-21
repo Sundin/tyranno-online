@@ -108,8 +108,8 @@ export default {
       const newComment = {
         name: this.name,
         comment: this.comment
-          .replaceAll('\n', '<br/>')
-          .replaceAll('\r', '<br/>'),
+          .replace(/\n/g, '<br/>')
+          .replace(/\r/g, '<br/>'),
         timestampUnique: `${timestamp}-${randomId()}`,
         createdAt: timestamp,
       };
