@@ -6,6 +6,9 @@
       <br /><br />
       <span v-html="item.body"></span>
     </p>
+    <div v-if=item.image>
+        <img :src="require(`@/${item.image}`)" />
+    </div>
     <br />
     <hr />
   </div>
@@ -19,3 +22,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+img {
+  max-width: 50%;
+}
+</style>

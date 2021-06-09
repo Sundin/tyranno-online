@@ -13,6 +13,15 @@ import NewsEntry from './NewsEntry.vue';
 
 const news = [
   {
+    heading: 'See you on the road!',
+    date: '2021-06-09',
+    body: `Finally it seems like we can start playing live again on Planet Earth soon!
+    The first confirmed gig so far will take place in Nässjö, Sweden on August 21th 2021.
+    Awesome support band of the night will be none other than the mighty Commando.
+    More gig announcements to follow... Want us to land in your city? Let us know!`,
+    image: 'assets/posters/noselake2021.jpg',
+  },
+  {
     heading: 'Space Marauders 2021',
     date: '2021-01-04',
     body: `The 2021 edition of our fanclub, the SPACE MARAUDERS, is now open for registration.
@@ -25,9 +34,9 @@ const news = [
   {
     heading: 'Support the underground',
     date: '2020-12-07',
-    body: `Unfortunately all gigs except the first one of our Solar System 2020 Tour 
-    had to be cancelled/postponed, as you already know. 
-    Support underground speed metal by purchasing the tour shirt anyway at 
+    body: `Unfortunately all gigs except the first one of our Solar System 2020 Tour
+    had to be cancelled/postponed, as you already know.
+    Support underground speed metal by purchasing the tour shirt anyway at
     <a href="https://www.jawbreaker.se/product/armory-2020-tour-t-shirt/">Jawbreaker.se</a>!`,
   },
   {
@@ -35,8 +44,8 @@ const news = [
     date: '2020-11-20',
     body: `We have our first gig for 2022 already secured.
     It's the show together with thrash legends Darkness in Jönköping,
-    that was originally planned to take place in April 2020, 
-    that has now been rescheduled to January 2022. 
+    that was originally planned to take place in April 2020,
+    that has now been rescheduled to January 2022.
     (We are in the big league now, booking gigs over a year in advance).`,
   },
   {
@@ -44,16 +53,16 @@ const news = [
     date: '2020-11-16',
     body: `Thanks for the wild night in Malmö last Saturday, Marauders!
     The city will probably take a long time to rebuild again.
-    Unfortunately our upcoming shows in Motala and Nässjö will have to be 
+    Unfortunately our upcoming shows in Motala and Nässjö will have to be
     cancelled/postponed due to the new and stricter restrictions from the Swedish government.
     We will let you know as soon as the restrictions are lifted again. We will return!`,
   },
   {
     heading: 'Upcoming Album And Live Gigs!',
     date: '2020-09-20',
-    body: `Greetings Marauders! 
-    You haven't heard from us in a while... 
-    That is because we have been busy writing our new album! 
+    body: `Greetings Marauders!
+    You haven't heard from us in a while...
+    That is because we have been busy writing our new album!
     It will be a concept album and will be recorded early next year.
     To wet your appetite though, we have decided to do a small tour this November and play the upcoming album in its enterity!!!
     Go to the <a href="/tour">TOUR</a> section to see all the upcoming dates.
@@ -85,7 +94,7 @@ const news = [
   {
     heading: '4/17',
     date: '2020-03-01',
-    body: `This year we are gonna celebrate the official speed metal island day (April 17th or 4/17) at The Abyss 
+    body: `This year we are gonna celebrate the official speed metal island day (April 17th or 4/17) at The Abyss
     in Gothenburg together with reigning heavy metal champions Ambush from Småland.
     Ambush are in turn celebrating the release of their third album "Infidel", out on High Roller Records, so this will be a night to remember.
     The gig is expected to sell out to make sure to get your tickets in advance.
@@ -102,8 +111,8 @@ const news = [
   {
     heading: 'Metal Magic',
     date: '2019-07-01',
-    body: `Soon we will head over to Denmark for our first show on Danish ground ever. 
-    The location will be non other than the legendary Metal Magic Festival in Fredericia on July 11-13th. 
+    body: `Soon we will head over to Denmark for our first show on Danish ground ever.
+    The location will be non other than the legendary Metal Magic Festival in Fredericia on July 11-13th.
     Our gig is on Friday the 12th, but beware that we will stay for the whole festival and have a wild time with everyone! See you there!
     <p>
     <a href="http://metal-magic.dk/">Read more and get your tickets here!</a>`,
@@ -111,8 +120,8 @@ const news = [
   {
     heading: 'Noselake Metal Festival',
     date: '2019-05-25',
-    body: `On June the 28th we will return once more to Småland, 
-    this time to lay waste to the town of Nässjö at Noselake Metal Festival. 
+    body: `On June the 28th we will return once more to Småland,
+    this time to lay waste to the town of Nässjö at Noselake Metal Festival.
     Two days of heavy metal with many killer bands!<br>
     <a href="https://secure.tickster.com/sv/wz6ztumev1t8wyu/products">Get your tickets here!</a>`,
   },

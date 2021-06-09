@@ -18,6 +18,11 @@ import GigEntry from './Gig.vue';
 
 const gigs = [
   {
+    date: '2021-08-21',
+    location: 'Klubb Noselake / Almenäs, Nässjö, Sweden',
+    comment: 'Support: Commando',
+  },
+  {
     date: '2020-12-05',
     location: 'Skyddsrummet Tolered, Hisingen, Sweden',
     cancelled: true,
