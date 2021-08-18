@@ -23,6 +23,10 @@ const gigs = [
     comment: 'Support: Commando',
   },
   {
+    date: '2021-08-20',
+    location: 'Bomber Bar, Motala, Sweden',
+  },
+  {
     date: '2020-12-05',
     location: 'Skyddsrummet Tolered, Hisingen, Sweden',
     cancelled: true,
