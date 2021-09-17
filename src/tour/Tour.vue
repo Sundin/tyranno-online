@@ -18,6 +18,14 @@ import GigEntry from './Gig.vue';
 
 const gigs = [
   {
+    date: '2022-01-08',
+    location: 'Klubb Fredagsmangel, Stockholm, Sweden',
+  },
+  {
+    date: '2021-10-03',
+    location: 'The Abyss, Gothenburg, Sweden',
+  },
+  {
     date: '2021-08-21',
     location: 'Klubb Noselake / Almenäs, Nässjö, Sweden',
     comment: 'Support: Commando',
