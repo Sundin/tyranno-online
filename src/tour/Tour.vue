@@ -20,6 +20,7 @@ const gigs = [
   {
     date: '2022-01-08',
     location: 'Klubb Fredagsmangel, Stockholm, Sweden',
+    comment: 'Local planet support: Earth Messiah',
   },
   {
     date: '2021-10-03',
