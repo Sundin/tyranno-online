@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Armory</title>
+  <link>https://www.armory.se</link>
+  <description>Hyper Speed Metal</description>
+  <item>
+    <title>More gigs confirmed</title>
+    <link>https://www.armory.se</link>
+    <description>We are finally back in the Milky Way and have now confirmed a bunch of new landing dates:</description>
+    <link>/more-gigs-confirmed/</link>
+    <pubDate>Fri, 17 Sep 2021 10:58:32 +0200</pubDate>
+    <guid>/more-gigs-confirmed/</guid>
+  </item>
+</channel>
+
+</rss> 
