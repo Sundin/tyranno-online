@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+<link href="https://www.armory.sefeed.xml" rel="self" type="application/atom+xml" />
+<link href="https://www.armory.se/" rel="alternate" type="text/html" hreflang="en-US" />
+<id>https://www.armory.se/feed1</id>
+<title type="html">Armory</title>
+<subtitle>Hyper Speed Metal</subtitle>

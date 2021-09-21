@@ -44,12 +44,26 @@ Add to `Tour.vue` with the following fields:
 * link (optional)
 * tickets (optional)
 
-### Add a news entry
-Add to `Home.vue` with the following fields:
+### Add a news entry & updated RSS feed
+Add to [news.json](./src/home/news.json) with the following fields:
 
 * heading
 * date
 * body
+
+Optional fields:
+
+* image
+
+To generate an updated RSS feed file, make sure you have `jq` installed:
+
+    brew install jq
+
+Then generate the feed:
+
+    ./rss/generate-rss-feed.sh
+
+Make sure to commit the updated `public/feed.xml` file.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

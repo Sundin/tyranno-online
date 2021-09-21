@@ -1,0 +1,6 @@
+<entry>
+<title type="html">---TITLE---</title>
+<link href="https://armory.se/" rel="alternate" type="text/html" title="---TITLE---" />
+<published>---DATE---</published>
+<id>---TITLE---_---DATE---</id>
+<content type="html">
