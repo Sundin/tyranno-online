@@ -61,7 +61,8 @@ To generate an updated RSS feed file, make sure you have `jq` installed:
 
 Then generate the feed:
 
-    ./rss/generate-rss-feed.sh
+    cd rss
+    ./generate-rss-feed.sh
 
 Make sure to commit the updated `public/feed.xml` file.
 
