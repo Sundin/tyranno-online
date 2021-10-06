@@ -34,7 +34,7 @@ export default {
 body,
 html {
   height: 100%;
-  background-color: black;
+  background-color: rgb(23, 16, 16);
   margin: 0;
 }
 
@@ -53,7 +53,7 @@ html {
 }
 
 .bg {
-  background-image: url("../assets/starbackground.gif");
+  /* background-image: url("../assets/starbackground.gif"); */
   background-attachment: fixed;
 
   overflow: scroll;
