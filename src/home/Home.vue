@@ -1,7 +1,7 @@
 <template>
   <main-layout>
     <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
-    <h1>News <a href="https://www.armory.se/feed.xml"><img alt="RSS" class="rss" src="../assets/rss.png"></a></h1>
+    <h1>News <a href="/feed.xml"><img alt="RSS" class="rss" src="../assets/rss.png"></a></h1>
     <div v-for="item in getNewsEntries()" v-bind:key="item.date">
       <news-entry v-bind:item="item"></news-entry>
     </div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+<link href="https://www.tyrannosatan.se/feed.xml" rel="self" type="application/atom+xml" />
+<link href="https://www.tyrannosatan.se/" rel="alternate" type="text/html" hreflang="en-US" />
+<id>https://www.tyrannosatan.se/feed1</id>
+<title type="html">Tyrannosatan</title>
+<subtitle>Tyrannic Metal</subtitle>
+<entry> <title type="html">Tyrannosatan Online</title> <link href="https://tyrannosatan.se/" rel="alternate" type="text/html" title="Tyrannosatan Online" /> <published>2021-10-01</published> <id>Tyrannosatan Online_2021-10-01</id> <content type="html">
+Website launched. &quot;Social&quot; media will be closed down soon. Follow us here for ill omens and other prophetic visions of the future.
+</content>
+</entry></feed>
