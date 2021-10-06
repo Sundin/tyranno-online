@@ -1,14 +1,19 @@
 <template>
   <div class="header">
-    <v-link href="/">
-      <img alt="Armory logo" class="logo" src="../assets/logo.png">
-    </v-link>
     <div class="navbar">
-      <v-link href="/">Home</v-link>
-      <v-link href="/tour">Tour</v-link>
-      <v-link href="/merch">Merch</v-link>
-      <v-link href="/fanclub">Fanclub</v-link>
-      <v-link href="/about">About</v-link>
+      <div class="links">
+        <v-link href="/">Home</v-link>
+        <v-link href="/tour">Tour</v-link>
+      </div>
+      <div class="links">
+        <v-link href="/">
+          <img alt="Armory logo" class="logo" src="../assets/logo.png">
+        </v-link>
+      </div>
+      <div class="links">
+        <v-link href="/merch">Merch</v-link>
+        <v-link href="/about">About</v-link>
+      </div>
     </div>
   </div>
 </template>
@@ -31,11 +36,21 @@ export default {
 .navbar {
   width: 100%;
   overflow: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .logo {
   padding: 12px;
-  max-width: 90%;
+  /* max-width: 20%; */
 }
 
 .navbar a {

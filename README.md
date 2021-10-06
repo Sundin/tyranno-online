@@ -1,10 +1,8 @@
-# armory-online
+# tyrannosatan-online
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d48ae8cf-6791-48d7-bace-c2cb06c06780/deploy-status)](https://app.netlify.com/sites/armory417/deploys)
 
-The website of ARMORY.
+The website of TYRANNOSATAN.
 
-Visit the page at [www.armory.se](https://www.armory.se).
 
 Currently not compatible with prettier plugin.
 

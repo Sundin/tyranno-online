@@ -25,9 +25,9 @@ export default {
 
 <style>
 :root {
-  --text-color: #0ebe08;
-  --link-color: #be3c08;
-  --hover-color: #ffffff;
+  --link-color: #a9a39f;
+  --text-color: #be3c08;
+  --hover-color: #be5708;
   font-size: 150%;
 }
 
