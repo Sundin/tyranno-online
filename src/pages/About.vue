@@ -3,7 +3,7 @@
     <h1>About Tyrannosatan</h1>
 
     <p>
-      Tyrannosatan was formed on the plague-riddenm island of Hisingen, Sweden a few years back.
+      Tyrannosatan was formed on the plague-ridden island of Hisingen, Sweden a few years back.
       The core idea was, and is, to play heavy metal directly from the heart.
     </p>
     <p>
