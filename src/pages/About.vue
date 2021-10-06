@@ -2,15 +2,23 @@
   <main-layout>
     <h1>About Tyrannosatan</h1>
 
+    <p>
+      Tyrannosatan was formed on the plague-riddenm island of Hisingen, Sweden a few years back.
+      The core idea was, and is, to play heavy metal directly from the heart.
+    </p>
+    <p>
+      Debut album coming on <a href="https://www.jawbreaker.se" target="_blank">Jawbreaker Records</a> winter 2021!
+    </p>
+
     <h1>Lineup</h1>
 
-    <p>Isfall – Thunder Bass & Vocals</p>
-    <p>G.G. Nattsvart – Guitars & Vocals</p>
+    <p>Isfall – Thunder Bass & Sinister Snarling</p>
+    <p>G.G. Nattsvart – Guitars & Hellish Howls</p>
     <p>Pestgam – Drums of Doom</p>
 
     <h1>Discography</h1>
-    <p>2017: Triumvirat (Rehearsal Demo)</p>
     <p><b>2021: Katakombernas Kakofoni</b></p>
+    <p>2017: Triumvirat (Rehearsal Demo)</p>
 
   </main-layout>
 </template>

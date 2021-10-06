@@ -2,7 +2,10 @@
   <main-layout>
     <h1>Merch</h1>
     <p>
-      Coming soon
+      Coming soon...
+    </p>
+    <p>
+      Meanwhile check out <a href="https://www.jawbreaker.se" target="_blank">Jawbreaker Records</a>.
     </p>
   </main-layout>
 </template>
