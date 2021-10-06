@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="navbar">
-      <div class="links">
+      <div class="links left">
         <v-link href="/">Home</v-link>
         <v-link href="/tour">Tour</v-link>
       </div>
@@ -10,7 +10,7 @@
           <img alt="Armory logo" class="logo" src="../assets/logo.png">
         </v-link>
       </div>
-      <div class="links">
+      <div class="links right">
         <v-link href="/merch">Merch</v-link>
         <v-link href="/about">About</v-link>
       </div>
@@ -46,6 +46,12 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+.left{
+  align-items: end;
+}
+.right{
+  align-items: start;
 }
 
 .logo {
