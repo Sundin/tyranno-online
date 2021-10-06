@@ -76,6 +76,18 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .left{
+    align-items: center;
+    order: 5;
+  }
+  .right{
+    align-items: center;
+    order: 6;
+  }
+
   .navbar a {
     float: none;
     display: block;
