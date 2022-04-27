@@ -2,7 +2,7 @@
   <div class="header">
     <div class="navbar">
       <div class="links left">
-        <v-link href="/">Home</v-link>
+        <v-link href="/news">News</v-link>
         <v-link href="/tour">Tour</v-link>
       </div>
       <div class="links">
