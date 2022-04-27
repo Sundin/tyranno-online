@@ -2,10 +2,7 @@
   <main-layout>
     <h1>Merch</h1>
     <p>
-      Coming soon...
-    </p>
-    <p>
-      Meanwhile check out <a href="https://www.jawbreaker.se" target="_blank">Jawbreaker Records</a>.
+      Order official merch from <a href="https://www.jawbreaker.se/product-tag/tyrannosatan/" target="_blank">Jawbreaker Records</a>!
     </p>
   </main-layout>
 </template>

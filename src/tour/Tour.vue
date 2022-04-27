@@ -18,9 +18,14 @@ import GigEntry from './Gig.vue';
 
 const gigs = [
   {
-    date: '2021-12-04',
-    location: 'TBA',
-    comment: 'Release ritual',
+    date: '2022-04-30',
+    location: 'Fredericia, Denmark',
+    comment: 'Metal Magic Warmup',
+  },
+  {
+    date: '2022-02-26',
+    location: 'The Abyss, Goatenburg',
+    comment: 'Release ritual for Katakombernas Kakofoni',
   },
   {
     date: '2020-10-10',
