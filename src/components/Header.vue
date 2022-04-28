@@ -7,7 +7,7 @@
       </div>
       <div class="links">
         <v-link href="/">
-          <img alt="Armory logo" class="logo" src="../assets/logo.png">
+          <img alt="Tyrannosatan logo" class="logo" src="../assets/logo.png">
         </v-link>
       </div>
       <div class="links right">

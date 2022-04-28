@@ -6,9 +6,6 @@
       Tyrannosatan was formed on the plague-ridden island of Hisingen, Sweden a few years back.
       The core idea was, and is, to play heavy metal directly from the heart.
     </p>
-    <p>
-      Debut album coming on <a href="https://www.jawbreaker.se" target="_blank">Jawbreaker Records</a> winter 2021!
-    </p>
 
     <h1>Lineup</h1>
 
