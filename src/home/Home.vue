@@ -13,6 +13,7 @@
     <h2>What does the fans have to say?</h2>
     <p>"It's a thunderous, raw and absolute ripper of an album and an instant favourite of mine!!"
       - Paul Holland, UK</p>
+      <hr/>
     <p>"A completely bonkers album that I pickep up at Mephisto
       [Copenhagen record store] a few days ago.
       A vile piece
@@ -20,10 +21,16 @@
       axes and all sorts of weapons swung above the head. And it's
       sung in Swedish which nudges the coolness of this album to the roof!"
       - tr00makrel, Denmark</p>
+      <hr/>
+
     <p>"It's early in the year but this is one of my favourites already -
       raw, thunderous and old school! Highly
       recommend getting a copy at jawbreaker.se!" - __deathdigital__</p>
+      <hr/>
+
     <p>"Your band sounds good, a mix of styles in a METAL way!" - Jorge / Mina de Aço, Portugal</p>
+      <hr/>
+
     <p>"Unrelenting blackend death thrash!!" - Chris, Mercenary Press / Inhuman Nature, UK</p>
     <p></p>
   </main-layout>
@@ -42,5 +49,18 @@ export default {
 <style scoped>
 .rss {
   width: 25px;
+}
+
+img {
+  width: 500px;
+  max-width: 80%;
+}
+
+a {
+  color: #9b0f0f;
+}
+
+a:hover {
+  color: #ad1a1a;
 }
 </style>
