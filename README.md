@@ -1,7 +1,7 @@
 # tyrannosatan-online
 
 
-The website of TYRANNOSATAN.
+The website of [TYRANNOSATAN](https://www.tyrannosatan.se).
 
 
 Currently not compatible with prettier plugin.
