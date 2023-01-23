@@ -17,6 +17,13 @@
     <p><b>2021: Katakombernas Kakofoni</b></p>
     <p>2017: Triumvirat (Rehearsal Demo)</p>
 
+
+    <p>
+    <img alt="Katekombernas Kakofoni" src="../assets/Tyrannosatan_Band.jpg" />
+  </p>
+  <p>
+    <img alt="Katekombernas Kakofoni" src="../assets/tyranno_live.png" />
+  </p>
   </main-layout>
 </template>
 
