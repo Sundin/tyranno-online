@@ -71,6 +71,9 @@ Pull requests and pushes to `master` run linting, a production build, and produc
 dependency audits on Node.js 24. Netlify uses the same Node.js version and publishes
 the `dist` directory.
 
+Ready pull requests are squash-merged into `master` automatically after all CI gates
+succeed.
+
 
 ## Backend
 
