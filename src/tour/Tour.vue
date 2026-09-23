@@ -1,7 +1,7 @@
 <template>
   <main-layout>
     <h1>Upcoming Gigs</h1>
-    <p v-if="upcoming.length === 0" class="empty-state">No rituals announced. Watch this space.</p>
+    <p v-if="upcoming.length === 0">No rituals announced. Watch this space.</p>
     <div v-for="gig in upcoming" :key="gig.date">
       <gig-entry :item="gig" :pastgig="false"></gig-entry>
     </div>
@@ -37,11 +37,3 @@ const gigs = [
 
 const { upcoming, past } = partitionEvents(gigs);
 </script>
-
-<style scoped>
-.empty-state {
-  border: 1px solid var(--line);
-  color: var(--muted-color);
-  padding: 1.25rem;
-}
-</style>
