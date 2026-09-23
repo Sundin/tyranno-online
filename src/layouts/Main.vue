@@ -1,7 +1,7 @@
 <template>
   <div class="bg">
     <div id="app">
-      <Header />
+      <SiteHeader />
       <Analytics />
       <div id="content">
         <slot></slot>
@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
+import SiteHeader from '../components/Header.vue';
 import Analytics from '../components/Analytics.vue';
 
 export default {
-  name: 'app',
+  name: 'AppLayout',
   components: {
-    Header,
+    SiteHeader,
     Analytics,
   },
 };

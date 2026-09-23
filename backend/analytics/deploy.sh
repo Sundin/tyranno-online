@@ -1,17 +1,18 @@
 #!/bin/bash
 
-sam package \
-    --template-file template.yml \
-    --output-template-file packaged.yml \
-    --s3-bucket armory-online
+set -euo pipefail
+
+sam build --template-file template.yml
 
 sam deploy \
-    --template-file packaged.yml \
+    --template-file .aws-sam/build/template.yaml \
     --stack-name armory-analytics \
     --capabilities CAPABILITY_IAM \
-    --region eu-west-1
+    --region eu-west-1 \
+    --s3-bucket armory-online \
+    --no-fail-on-empty-changeset
 
-echo "Deployment successful. You base URL is:"
+echo "Deployment successful. Your base URL is:"
 
 aws cloudformation describe-stacks \
         --stack-name armory-analytics \

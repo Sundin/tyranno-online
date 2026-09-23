@@ -7,7 +7,7 @@
       <span v-html="item.body"></span>
     </p>
     <div v-if=item.image>
-        <img :src="require(`@/${item.image}`)" />
+        <img :src="imageUrl(item.image)" />
     </div>
     <br />
     <hr />
@@ -15,10 +15,21 @@
 </template>
 
 <script>
+const images = import.meta.glob('../assets/**/*', {
+  eager: true,
+  import: 'default',
+  query: '?url',
+});
+
 export default {
   name: 'NewsEntry',
   props: {
     item: Object,
+  },
+  methods: {
+    imageUrl(path) {
+      return images[`../${path}`];
+    },
   },
 };
 </script>
