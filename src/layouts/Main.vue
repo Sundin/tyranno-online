@@ -2,7 +2,10 @@
   <div class="bg">
     <div id="app">
       <SiteHeader />
-      <main id="content"><slot></slot></main>
+      <main id="content">
+        <slot></slot>
+        <div class="ritual-mark" aria-hidden="true">† &nbsp; † &nbsp; †</div>
+      </main>
     </div>
   </div>
 </template>
@@ -73,6 +76,24 @@ h1 {
   margin-top: 1.2em;
 }
 
+h1::before,
+h1::after {
+  color: rgba(190, 60, 8, 0.72);
+  font-size: 0.48em;
+  font-weight: normal;
+  vertical-align: 0.18em;
+}
+
+h1::before {
+  content: "†";
+  margin-right: 0.55em;
+}
+
+h1::after {
+  content: "†";
+  margin-left: 0.55em;
+}
+
 h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
 h3 { font-size: clamp(1.2rem, 3vw, 1.55rem); }
 p, li { line-height: 1.55; }
@@ -101,7 +122,28 @@ hr {
   border: 0;
   border-top: 1px solid rgba(190, 60, 8, 0.6);
   margin: 2.5rem auto;
+  overflow: visible;
+  position: relative;
   width: 50%;
+}
+
+hr::after {
+  background: #171010;
+  color: rgba(190, 60, 8, 0.8);
+  content: "†";
+  left: 50%;
+  line-height: 1;
+  padding: 0 0.65rem;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.ritual-mark {
+  color: rgba(190, 60, 8, 0.6);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  margin-top: 3.5rem;
 }
 
 span.title { font-style: italic; }
@@ -121,5 +163,13 @@ button:hover { background: #6a0000; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
+}
+
+@media screen and (max-width: 480px) {
+  h1::before,
+  h1::after {
+    display: block;
+    margin: 0.3em 0;
+  }
 }
 </style>
