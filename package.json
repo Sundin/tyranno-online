@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build && cp dist/index.html dist/404.html",
-    "lint": "vue-cli-service lint"
+    "test": "node --test tests/*.test.mjs",
+    "lint": "vue-cli-service lint src"
   },
   "dependencies": {
     "axios": "^0.21.1",
