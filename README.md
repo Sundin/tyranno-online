@@ -26,6 +26,9 @@ npm run build
 npm run test
 ```
 
+Pull requests run tests, linting, and a production build. Ready pull requests are
+squash-merged into `master` automatically after all CI gates succeed.
+
 ### Lints and fixes files
 ```
 npm run lint --fix
