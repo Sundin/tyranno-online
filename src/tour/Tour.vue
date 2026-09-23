@@ -1,19 +1,21 @@
 <template>
   <main-layout>
     <h1>Upcoming Gigs</h1>
-    <div v-for="gig in getUpcomingGigs()" v-bind:key="gig.date">
-      <gig-entry v-bind:item="gig" v-bind:pastgig=false></gig-entry>
+    <p v-if="upcoming.length === 0" class="empty-state">No rituals announced. Watch this space.</p>
+    <div v-for="gig in upcoming" :key="gig.date">
+      <gig-entry :item="gig" :pastgig="false"></gig-entry>
     </div>
     <hr />
     <h1>Past Gigs</h1>
-    <div v-for="gig in getPastGigs()" v-bind:key="gig.date">
-      <gig-entry v-bind:item="gig" v-bind:pastgig=true></gig-entry>
+    <div v-for="gig in past" :key="gig.date">
+      <gig-entry :item="gig" :pastgig="true"></gig-entry>
     </div>
   </main-layout>
 </template>
 
-<script>
+<script setup>
 import MainLayout from '../layouts/Main.vue';
+import { partitionEvents } from '../lib/content';
 import GigEntry from './Gig.vue';
 
 const gigs = [
@@ -33,24 +35,13 @@ const gigs = [
   },
 ];
 
-const today = new Date().setHours(0);
-
-export default {
-  components: {
-    MainLayout,
-    GigEntry,
-  },
-  methods: {
-    getUpcomingGigs() {
-      return gigs
-        .filter((gig) => new Date(gig.date) >= today)
-        .sort((a, b) => new Date(a.date) - new Date(b.date));
-    },
-    getPastGigs() {
-      return gigs
-        .filter((gig) => new Date(gig.date) < today)
-        .sort((a, b) => new Date(b.date) - new Date(a.date));
-    },
-  },
-};
+const { upcoming, past } = partitionEvents(gigs);
 </script>
+
+<style scoped>
+.empty-state {
+  border: 1px solid var(--line);
+  color: var(--muted-color);
+  padding: 1.25rem;
+}
+</style>

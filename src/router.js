@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from './home/Home.vue';
-import News from './home/News.vue';
-import About from './pages/About.vue';
-import Merch from './pages/Merch.vue';
-import NotFound from './pages/NotFound.vue';
-import Tour from './tour/Tour.vue';
+
+const Home = () => import('./home/Home.vue');
+const News = () => import('./home/News.vue');
+const About = () => import('./pages/About.vue');
+const Merch = () => import('./pages/Merch.vue');
+const NotFound = () => import('./pages/NotFound.vue');
+const Tour = () => import('./tour/Tour.vue');
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

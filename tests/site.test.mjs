@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
+import { paginate, partitionEvents, publishedEntries } from '../src/lib/content.js';
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), 'utf8');
 
@@ -8,6 +9,19 @@ test('the public entry point mounts the Tyrannosatan app', async () => {
   const html = await read('index.html');
   assert.match(html, /<title>Tyrannosatan<\/title>/);
   assert.match(html, /<div id="app"><\/div>/);
+});
+
+test('content helpers sort, partition, and paginate without timezone drift', () => {
+  const entries = [
+    { date: '2026-09-24', heading: 'future' },
+    { date: '2026-09-22', heading: 'older' },
+    { date: '2026-09-23', heading: 'today' },
+  ];
+  const today = new Date(2026, 8, 23, 23, 30);
+
+  assert.deepEqual(publishedEntries(entries, today).map(({ heading }) => heading), ['today', 'older']);
+  assert.deepEqual(partitionEvents(entries, today).upcoming.map(({ heading }) => heading), ['today', 'future']);
+  assert.deepEqual(paginate(entries, 99, 2), { items: [entries[2]], page: 1, pageCount: 2 });
 });
 
 test('the core pages remain registered', async () => {

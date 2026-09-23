@@ -5,19 +5,11 @@
   </router-link>
 </template>
 
-<script>
-export default {
-  props: {
-    href: {
-      type: String,
-      required: true,
-    },
+<script setup>
+defineProps({
+  href: {
+    type: String,
+    required: true,
   },
-};
+});
 </script>
-
-<style scoped>
-.active {
-  color: cornflowerblue;
-}
-</style>

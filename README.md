@@ -23,6 +23,7 @@ npm run build
 
 ### Run quality checks
 ```
+npm test
 npm run lint
 npm run build
 ```
@@ -73,6 +74,17 @@ the `dist` directory.
 
 Ready pull requests are squash-merged into `master` automatically after all CI gates
 succeed.
+
+### Frontend architecture
+
+Page components live under `src/home`, `src/pages`, and `src/tour`. Shared layout and
+navigation components live under `src/layouts` and `src/components`. Date filtering,
+event ordering, and pagination are pure functions in `src/lib/content.js` and are
+covered by the Node test suite.
+
+Analytics is initialized once from `src/services/analytics.js`, records client-side
+route changes, and sends a non-blocking beacon when the page is left. Set
+`VITE_ANALYTICS_URL` to use an endpoint other than the production default.
 
 
 ## Backend
