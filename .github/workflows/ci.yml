@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   frontend:
-    name: Frontend quality gates
+    name: Quality gates
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
