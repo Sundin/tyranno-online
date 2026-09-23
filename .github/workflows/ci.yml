@@ -2,9 +2,11 @@ name: CI
 
 on:
   pull_request:
-    branches: [master]
+    branches:
+      - master
   push:
-    branches: [master]
+    branches:
+      - master
   workflow_dispatch:
 
 permissions:
@@ -15,31 +17,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  quality:
+  frontend:
     name: Quality gates
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-    env:
-      NODE_OPTIONS: --openssl-legacy-provider
-
+    timeout-minutes: 10
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run lint
+      - run: npm run build
+      - run: npm audit --omit=dev --audit-level=high
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Test
-        run: npm test
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Build
-        run: npm run build
+  analytics-lambda:
+    name: Analytics Lambda quality gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: backend/analytics/package-lock.json
+      - run: npm ci --prefix backend/analytics
+      - run: node --check backend/analytics/index.js
+      - run: npm --prefix backend/analytics audit --omit=dev --audit-level=high

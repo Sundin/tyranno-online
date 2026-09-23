@@ -1,106 +1,91 @@
-const AWS = require('aws-sdk');
+const { randomUUID } = require('node:crypto');
+const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
+const {
+  DynamoDBDocumentClient,
+  PutCommand,
+  QueryCommand,
+} = require('@aws-sdk/lib-dynamodb');
 
-AWS.config.update({ region: process.env.AWS_REGION });
+const ddb = DynamoDBDocumentClient.from(new DynamoDBClient({}), {
+  marshallOptions: {
+    removeUndefinedValues: true,
+  },
+});
 
-const ddb = new AWS.DynamoDB.DocumentClient();
+const corsHeaders = {
+  'Access-Control-Allow-Headers': '*',
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+};
 
-exports.postAnalytics = async function (request, context, callback) {
-  console.log('Received body:', JSON.stringify(request.body, null, 2));
-
-  const body = JSON.parse(request.body);
-
-  const { events } = body;
+exports.postAnalytics = async function postAnalytics(request) {
+  const body = JSON.parse(request.body ?? '{}');
+  const events = Array.isArray(body.events)
+    ? body.events.map((event) => ({ ...event }))
+    : [];
   const { pageLoad } = body;
-  const userAgent = request.headers['User-Agent'];
+  const userAgent = request.headers?.['User-Agent']
+    ?? request.headers?.['user-agent']
+    ?? 'unknown';
   const sessionEnd = Date.now();
 
-  for (let i = 0; i < events.length - 1; i++) {
+  for (let i = 0; i < events.length - 1; i += 1) {
     events[i].duration = events[i + 1].timestamp - events[i].timestamp;
   }
 
-  events[events.length - 1].duration = sessionEnd - events[events.length - 1].timestamp;
-
-  for (let i = 0; i < events.length; i++) {
-    events[i].timestamp = formatDateFull(events[i].timestamp);
+  if (events.length > 0) {
+    events[events.length - 1].duration = sessionEnd - events[events.length - 1].timestamp;
   }
 
+  for (const event of events) {
+    event.timestamp = formatDateFull(event.timestamp);
+  }
 
-  const params = {
+  await ddb.send(new PutCommand({
     TableName: process.env.DynamoTableName,
     Item: {
       monthkey: formatDateShort(sessionEnd),
-      'timestamp-unique': `${sessionEnd}-${randomId()}`,
+      'timestamp-unique': `${sessionEnd}-${randomUUID()}`,
       events,
       pageLoad,
       browser: userAgent,
       sessionEnd: formatDateFull(sessionEnd),
     },
-  };
+  }));
 
-  return new Promise((resolve, reject) => {
-    ddb.put(params, (err, data) => {
-      if (err) {
-        console.log('Error', err);
-        reject(Error(err));
-      } else {
-        console.log('Success', data);
-        resolve(200);
-      }
-    });
-  });
+  return {
+    statusCode: 200,
+    headers: corsHeaders,
+    body: '',
+  };
 };
 
-exports.getAnalytics = async function (request, context, callback) {
-  const params = {
+exports.getAnalytics = async function getAnalytics() {
+  const data = await ddb.send(new QueryCommand({
     TableName: process.env.DynamoTableName,
     KeyConditionExpression: 'monthkey = :dkey',
     ExpressionAttributeValues: {
-      ':dkey': formatDateShort(new Date().getTime()),
+      ':dkey': formatDateShort(Date.now()),
     },
-  };
-  return new Promise((resolve, reject) => {
-    ddb.query(params, (err, data) => {
-      if (err) {
-        console.log('Error', err);
-        reject(Error(err));
-      } else {
-        console.log('Success', data);
-        resolve({
-          statusCode: 200,
-          headers: {
-            'Access-Control-Allow-Headers': '*',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
-          },
-          body: JSON.stringify(data.Items
-            .map((item) => ({
-              sessionEnd: item.sessionEnd,
-              events: item.events,
-              pageLoad: item.pageLoad,
-              browser: item.browser,
-            }))),
-        });
-      }
-    });
-  });
-};
+  }));
 
-function randomId() {
-  return 'xxxxxxxx'.replace(/[xy]/g, (c) => {
-    const r = Math.random() * 16 | 0; const
-      v = c == 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
-}
+  return {
+    statusCode: 200,
+    headers: corsHeaders,
+    body: JSON.stringify((data.Items ?? []).map((item) => ({
+      sessionEnd: item.sessionEnd,
+      events: item.events,
+      pageLoad: item.pageLoad,
+      browser: item.browser,
+    }))),
+  };
+};
 
 function formatDateFull(timestamp) {
   return new Date(timestamp).toISOString();
 }
 
 function formatDateShort(timestamp) {
-  const d = new Date(timestamp);
-  return `${d.getFullYear()
-  }-${
-    (`0${d.getMonth() + 1}`).slice(-2)
-  }`;
+  const date = new Date(timestamp);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
 }

@@ -5,7 +5,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.postAnalytics
-      Runtime: nodejs12.x
+      Runtime: nodejs24.x
       Policies:
         - DynamoDBWritePolicy:
             TableName: !Ref AnalyticsTable
@@ -23,7 +23,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.getAnalytics
-      Runtime: nodejs12.x
+      Runtime: nodejs24.x
       Policies:
         - DynamoDBReadPolicy:
             TableName: !Ref AnalyticsTable

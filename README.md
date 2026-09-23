@@ -4,7 +4,7 @@
 The website of [TYRANNOSATAN](https://www.tyrannosatan.se).
 
 
-Currently not compatible with prettier plugin.
+The site runs on Vue 3 and Vite 8. Use Node.js 24 LTS locally to match CI and Netlify.
 
 ## Project setup
 ```
@@ -13,7 +13,7 @@ npm ci
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
@@ -21,17 +21,15 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
+### Run quality checks
 ```
-npm run test
+npm run lint
+npm run build
 ```
 
-Pull requests run tests, linting, and a production build. Ready pull requests are
-squash-merged into `master` automatically after all CI gates succeed.
-
-### Lints and fixes files
+### Preview the production build
 ```
-npm run lint --fix
+npm run preview
 ```
 
 ## Maintenance
@@ -67,8 +65,14 @@ Then generate the feed:
 
 Make sure to commit the updated `public/feed.xml` file.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Build pipelines
+
+Pull requests and pushes to `master` run linting, a production build, and production
+dependency audits on Node.js 24. Netlify uses the same Node.js version and publishes
+the `dist` directory.
+
+Ready pull requests are squash-merged into `master` automatically after all CI gates
+succeed.
 
 
 ## Backend
@@ -76,6 +80,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Prerequisites
 * Install [aws](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html) or [aws2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) CLI tool.
 * Install [sam](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) CLI tool.
+* Install Node.js 24.
 * Make sure the bucket `armory-online` exists.
 
 ### Deploy analytics backend
