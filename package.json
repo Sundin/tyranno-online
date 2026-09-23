@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && cp dist/index.html dist/404.html",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build && cp dist/index.html dist/404.html",
     "test": "node --test tests/*.test.mjs",
     "lint": "vue-cli-service lint src"
   },
