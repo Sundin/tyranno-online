@@ -20,11 +20,28 @@
 
 
     <p>
-    <img alt="Katekombernas Kakofoni" src="../assets/Tyrannosatan_Band.jpg" />
-  </p>
-  <p>
-    <img alt="Katekombernas Kakofoni" src="../assets/tyranno_live.png" />
-  </p>
+      <img
+        alt="Tyrannosatan posed before a cemetery monument"
+        decoding="async"
+        height="4896"
+        loading="lazy"
+        src="../assets/tyrannosatan-cemetery-portrait.jpg"
+        width="3264"
+      />
+    </p>
+    <p>
+      <img
+        alt="Tyrannosatan standing outside a cemetery mausoleum"
+        decoding="async"
+        height="3264"
+        loading="lazy"
+        src="../assets/tyrannosatan-cemetery-band.jpg"
+        width="4896"
+      />
+    </p>
+    <p>
+      <img alt="Katekombernas Kakofoni" src="../assets/tyranno_live.png" />
+    </p>
   </main-layout>
 </template>
 
