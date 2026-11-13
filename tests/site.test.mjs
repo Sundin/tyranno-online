@@ -46,6 +46,7 @@ test('the rituals page includes the recent festival history', async () => {
   ]) {
     assert.match(tour, new RegExp(`date: ['"]${date}['"][\\s\\S]*?comment: ['"]${festival}['"]`));
   }
+  assert.doesNotMatch(tour, /Dronningepladsen/);
 });
 
 test('news entries have valid required fields and dates', async () => {
