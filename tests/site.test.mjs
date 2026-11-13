@@ -63,3 +63,10 @@ test('the discography includes the Babylons Skräck tape', async () => {
   const about = await read('src/pages/About.vue');
   assert.match(about, /2025: Babylons Skräck \(Tape\)/);
 });
+
+test('the about page uses the new cemetery band photos', async () => {
+  const about = await read('src/pages/About.vue');
+  assert.match(about, /tyrannosatan-cemetery-portrait\.jpg/);
+  assert.match(about, /tyrannosatan-cemetery-band\.jpg/);
+  assert.doesNotMatch(about, /Tyrannosatan_Band\.jpg/);
+});
