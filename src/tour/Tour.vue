@@ -31,7 +31,7 @@ const gigs = [
   },
   {
     date: '2025-07-11',
-    location: 'Dronningepladsen, Fredericia, Denmark',
+    location: 'Fredericia, Denmark',
     comment: 'Metal Magic Festival',
   },
   {
