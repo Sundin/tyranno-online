@@ -14,6 +14,7 @@
     <p>Pestgam – Drums of Doom</p>
 
     <h1>Discography</h1>
+    <p>2025: Babylons Skräck (Tape)</p>
     <p><b>2021: Katakombernas Kakofoni</b></p>
     <p>2017: Triumvirat (Rehearsal Demo)</p>
 

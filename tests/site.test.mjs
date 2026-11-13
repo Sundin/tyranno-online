@@ -42,3 +42,8 @@ test('news entries have valid required fields and dates', async () => {
     assert.ok(!Number.isNaN(Date.parse(`${entry.date}T00:00:00Z`)), `entry ${index} date`);
   }
 });
+
+test('the discography includes the Babylons Skräck tape', async () => {
+  const about = await read('src/pages/About.vue');
+  assert.match(about, /2025: Babylons Skräck \(Tape\)/);
+});
