@@ -32,6 +32,22 @@ test('the core pages remain registered', async () => {
   assert.match(routes, /:\s*pathMatch\(\.\*\)\*/);
 });
 
+test('the rituals page includes the recent festival history', async () => {
+  const tour = await read('src/tour/Tour.vue');
+  const header = await read('src/components/Header.vue');
+
+  assert.match(tour, /Upcoming Rituals/);
+  assert.match(tour, /Past Rituals/);
+  assert.match(header, />Rituals<\/v-link>/);
+  for (const [date, festival] of [
+    ['2026-05-28', 'Muskelrock'],
+    ['2025-11-28', 'The Abyss Festival'],
+    ['2025-07-11', 'Metal Magic Festival'],
+  ]) {
+    assert.match(tour, new RegExp(`date: ['"]${date}['"][\\s\\S]*?comment: ['"]${festival}['"]`));
+  }
+});
+
 test('news entries have valid required fields and dates', async () => {
   const news = JSON.parse(await read('src/home/news.json'));
   assert.ok(news.length > 0);

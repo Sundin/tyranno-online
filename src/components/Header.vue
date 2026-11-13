@@ -3,7 +3,7 @@
     <nav class="navbar" aria-label="Main navigation">
       <div class="links left">
         <v-link href="/news">News</v-link>
-        <v-link href="/tour">Tour</v-link>
+        <v-link href="/tour">Rituals</v-link>
       </div>
       <v-link class="brand" href="/" aria-label="Tyrannosatan home">
         <img alt="Tyrannosatan" class="logo" src="../assets/logo.png">

@@ -35,7 +35,7 @@ npm run preview
 
 ## Maintenance
 
-### Add a new gig
+### Add a new ritual
 Add to `Tour.vue` with the following fields:
 
 * date
