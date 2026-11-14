@@ -42,11 +42,16 @@ test('the rituals page includes the recent festival history', async () => {
   assert.match(header, />Rituals<\/v-link>/);
   for (const [date, festival] of [
     ['2026-05-28', 'Muskelrock'],
+    ['2026-05-22', 'Muskelrock pre-party with Sandstorm and Tyranis'],
     ['2025-11-28', 'The Abyss Festival'],
     ['2025-07-11', 'Metal Magic Festival'],
   ]) {
     assert.match(tour, new RegExp(`date: ['"]${date}['"][\\s\\S]*?comment: ['"]${festival}['"]`));
   }
+  assert.match(
+    tour,
+    /date: ['"]2026-05-22['"][\s\S]*?location: ['"]The Abyss, Goatenburg['"]/,
+  );
   assert.doesNotMatch(tour, /Dronningepladsen/);
 });
 
