@@ -92,6 +92,8 @@ test('the discography exposes all three release pages', async () => {
   for (const slug of ['babylons-skrack', 'katakombernas-kakofoni', 'triumvirat']) {
     assert.match(data, new RegExp(`slug: ['"]${slug}['"]`));
   }
+  assert.match(data, /slug: ['"]triumvirat['"][\s\S]*?formats: ['"]Cassette['"]/);
+  assert.doesNotMatch(data, /formats: ['"]Digital['"]/);
   for (const kicker of [
     '2025 · 4 song cassette tape',
     "2022 · Tyrannosatan's ripping debut LP.",

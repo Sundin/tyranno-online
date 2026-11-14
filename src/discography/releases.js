@@ -109,7 +109,7 @@ export const releases = [
     detailKicker: '2017 · Rehearsal demo',
     description: 'The independent debut demo that introduced the original trio before the band returned to record Katakombernas Kakofoni.',
     label: 'Independent',
-    formats: 'Digital',
+    formats: 'Cassette',
     duration: '11:00',
     tracks: [
       { title: 'Permafrost', duration: '3:26' },
