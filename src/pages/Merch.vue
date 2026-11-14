@@ -1,7 +1,7 @@
 <template>
   <main-layout>
     <h1>Merch</h1>
-    <p class="intro">Selected artifacts from Jawbreaker Records.</p>
+    <p class="section-kicker">Selected artifacts from Jawbreaker Records.</p>
 
     <div class="merch-grid">
       <a
@@ -48,13 +48,6 @@ import { products } from '../merch/products.js';
 </script>
 
 <style scoped>
-.intro {
-  font-size: 0.9rem;
-  letter-spacing: 0.12em;
-  margin: -0.5rem 0 2rem;
-  text-transform: uppercase;
-}
-
 .merch-grid {
   display: grid;
   gap: 1.15rem;

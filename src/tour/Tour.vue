@@ -1,7 +1,7 @@
 <template>
   <main-layout>
     <h1>Upcoming Rituals</h1>
-    <p v-if="upcoming.length === 0">No rituals announced. Watch this space.</p>
+    <p v-if="upcoming.length === 0" class="section-kicker">No rituals announced.</p>
     <div v-for="gig in upcoming" :key="gig.date">
       <gig-entry :item="gig" :pastgig="false"></gig-entry>
     </div>

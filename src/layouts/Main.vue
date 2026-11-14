@@ -146,6 +146,14 @@ hr::after {
   margin-top: 3.5rem;
 }
 
+.section-kicker {
+  color: #9a8f88;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  margin: -0.5rem 0 2rem;
+  text-transform: uppercase;
+}
+
 span.title { font-style: italic; }
 
 button {

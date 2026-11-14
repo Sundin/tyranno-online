@@ -1,9 +1,8 @@
 <template>
   <main-layout>
     <header class="page-intro">
-      <p class="eyebrow">Recorded rituals · 2017–2025</p>
       <h1>Discography</h1>
-      <p>Three transmissions of howling heavy metal fury.</p>
+      <p class="section-kicker">Recorded rituals · 2017–2025</p>
     </header>
 
     <div class="release-grid">
@@ -39,7 +38,6 @@ import { releases } from './releases';
 <style scoped>
 .page-intro { margin: 0 auto 2.5rem; }
 
-.eyebrow,
 .release-meta {
   color: #9a8f88;
   font-size: 0.72rem;
