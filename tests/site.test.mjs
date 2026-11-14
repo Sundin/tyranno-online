@@ -108,6 +108,13 @@ test('the discography exposes all three release pages', async () => {
   assert.doesNotMatch(data, /(?:bass|guitars|drums) & vocals|Slirhammer — drums/i);
   assert.match(data, /A lawless approach to mid-to-late 80’s underground extreme \(and traditional\) heavy metal spiritus\./);
   assert.match(data, /cite: ['"]Mystification Zine['"]/);
+  for (const review of [
+    ['The album has that feeling of urgency that is simply remarkable.', 'Metal Addicts', 'https://metaladdicts.com/tyrannosatan-babylons-skrack-review/'],
+    ["[A] combination of aggressiveness, melodies and very good harmonic structures [...] If you're into Metal, you must be introduced to TYRANNOSATAN's music.", 'Metal Temple', 'https://metal-temple.com/review/tyrannosatan-babylons-skrack/'],
+    ['It is not as bad as I originally thought.', 'VM-Underground', 'https://www.vm-underground.com/review/tyrannosatan-babylons-skrack-ep/'],
+  ]) {
+    for (const value of review) assert.ok(data.includes(value));
+  }
   for (const kicker of [
     '2025 · 4 song cassette tape',
     "2022 · Tyrannosatan's ripping debut LP.",
