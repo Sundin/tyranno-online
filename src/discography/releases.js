@@ -26,9 +26,9 @@ export const releases = [
       { title: 'Astronomicon', duration: '6:45' },
     ],
     lineup: [
-      'Isfall — bass & vocals',
-      'Nattsvart — guitars & vocals',
-      'Pestgam — drums & vocals',
+      'Isfall – Thunder Bass & Sinister Snarling',
+      'G.G. Nattsvart – Guitars & Hellish Howls',
+      'Pestgam – Drums of Doom & Gruesome Growls',
     ],
     credits: ['Layout by Turborock Productions'],
     links: [
@@ -70,9 +70,9 @@ export const releases = [
       { title: 'Tyrannosatan', duration: '4:02' },
     ],
     lineup: [
-      'Isfall — bass & vocals',
-      'Nattsvart — guitars & vocals',
-      'Slirhammer — drums',
+      'Isfall – Thunder Bass & Sinister Snarling',
+      'G.G. Nattsvart – Guitars & Hellish Howls',
+      'Slirhammer – Drums of Doom',
     ],
     credits: [
       'Produced, recorded, mixed & mastered in February 2021',
@@ -117,9 +117,9 @@ export const releases = [
       { title: 'Underjordisk Ondska (Hell Satan)', duration: '4:52' },
     ],
     lineup: [
-      'Isfall — bass & vocals',
-      'Nattsvart — guitars & vocals',
-      'Slirhammer — drums',
+      'Isfall – Thunder Bass & Sinister Snarling',
+      'G.G. Nattsvart – Guitars & Hellish Howls',
+      'Slirhammer – Drums of Doom',
     ],
     credits: [
       'Recorded and mixed by Niclas Mendahl Ingelman',

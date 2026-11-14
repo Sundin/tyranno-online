@@ -97,6 +97,15 @@ test('the discography exposes all three release pages', async () => {
   }
   assert.match(data, /slug: ['"]triumvirat['"][\s\S]*?formats: ['"]Cassette['"]/);
   assert.doesNotMatch(data, /formats: ['"]Digital['"]/);
+  for (const member of [
+    'Isfall – Thunder Bass & Sinister Snarling',
+    'G.G. Nattsvart – Guitars & Hellish Howls',
+    'Pestgam – Drums of Doom & Gruesome Growls',
+    'Slirhammer – Drums of Doom',
+  ]) {
+    assert.match(data, new RegExp(member.replaceAll('.', '\\.')));
+  }
+  assert.doesNotMatch(data, /(?:bass|guitars|drums) & vocals|Slirhammer — drums/i);
   for (const kicker of [
     '2025 · 4 song cassette tape',
     "2022 · Tyrannosatan's ripping debut LP.",
