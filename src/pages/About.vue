@@ -10,11 +10,11 @@
       around ancient evil, forbidden magic, cosmic horror and war.
     </p>
 
-    <h1>Lineup</h1>
+    <h1>Members</h1>
 
     <p>Isfall – Thunder Bass & Sinister Snarling</p>
     <p>G.G. Nattsvart – Guitars & Hellish Howls</p>
-    <p>Pestgam – Drums of Doom</p>
+    <p>Pestgam – Drums of Doom &amp; Gruesome Growls</p>
 
     <p>
       <img
