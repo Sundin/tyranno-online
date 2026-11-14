@@ -84,7 +84,8 @@ test('the discography exposes all three release pages', async () => {
   const index = await read('src/discography/Discography.vue');
   const detail = await read('src/discography/Release.vue');
 
-  assert.match(header, />Discography<\/v-link>/);
+  assert.match(header, />Releases<\/v-link>/);
+  assert.doesNotMatch(header, />Discography<\/v-link>/);
   assert.doesNotMatch(header, />News<\/v-link>/);
   for (const slug of ['babylons-skrack', 'katakombernas-kakofoni', 'triumvirat']) {
     assert.match(data, new RegExp(`slug: ['"]${slug}['"]`));
