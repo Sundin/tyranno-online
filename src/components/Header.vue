@@ -2,7 +2,7 @@
   <header class="header">
     <nav class="navbar" aria-label="Main navigation">
       <div class="links left">
-        <v-link href="/discography">Discography</v-link>
+        <v-link href="/discography">Releases</v-link>
         <v-link href="/tour">Rituals</v-link>
       </div>
       <v-link class="brand" href="/" aria-label="Tyrannosatan home">
