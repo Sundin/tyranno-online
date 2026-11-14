@@ -25,6 +25,11 @@ const gigs = [
     comment: 'Muskelrock',
   },
   {
+    date: '2026-05-22',
+    location: 'The Abyss, Goatenburg',
+    comment: 'Muskelrock pre-party with Sandstorm and Tyranis',
+  },
+  {
     date: '2025-11-28',
     location: 'Monument 031, Gothenburg',
     comment: 'The Abyss Festival',
