@@ -35,6 +35,11 @@ export const releases = [
       { label: 'Listen & buy on Bandcamp', url: 'https://tyrannosatan.bandcamp.com/album/babylons-skr-ck' },
       { label: 'Order from Jawbreaker Records', url: 'https://www.jawbreaker.se/product/tyrannosatan-babylons-skrack-cassette/' },
     ],
+    reviews: [
+      { quote: 'The album has that feeling of urgency that is simply remarkable.', cite: 'Metal Addicts', url: 'https://metaladdicts.com/tyrannosatan-babylons-skrack-review/' },
+      { quote: "[A] combination of aggressiveness, melodies and very good harmonic structures [...] If you're into Metal, you must be introduced to TYRANNOSATAN's music.", cite: 'Metal Temple', url: 'https://metal-temple.com/review/tyrannosatan-babylons-skrack/' },
+      { quote: 'It is not as bad as I originally thought.', cite: 'VM-Underground', url: 'https://www.vm-underground.com/review/tyrannosatan-babylons-skrack-ep/' },
+    ],
     sources: [
       { label: 'Bandcamp', url: 'https://tyrannosatan.bandcamp.com/album/babylons-skr-ck' },
       { label: 'Metal Archives', url: 'https://www.metal-archives.com/albums/Tyrannosatan/Babylons_skr%C3%A4ck/1316059' },
