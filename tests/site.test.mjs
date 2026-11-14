@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, stat } from 'node:fs/promises';
 import test from 'node:test';
 import { paginate, partitionEvents, publishedEntries } from '../src/lib/content.js';
 
@@ -7,8 +7,20 @@ const read = (path) => readFile(new URL(`../${path}`, import.meta.url), 'utf8');
 
 test('the public entry point mounts the Tyrannosatan app', async () => {
   const html = await read('index.html');
+  const socialPreview = await stat(
+    new URL('../public/tyrannosatan-social-preview.jpg', import.meta.url),
+  );
   assert.match(html, /<title>Tyrannosatan<\/title>/);
   assert.match(html, /<div id="app"><\/div>/);
+  assert.match(html, /<link rel="canonical" href="https:\/\/www\.tyrannosatan\.se\/"/);
+  assert.match(html, /property="og:title" content="Tyrannosatan — True Metal from Goatenburg"/);
+  assert.match(html, /property="og:description"/);
+  assert.match(html, /property="og:image"[\s\S]*?tyrannosatan-social-preview\.jpg/);
+  assert.match(html, /property="og:image:width" content="4896"/);
+  assert.match(html, /property="og:image:height" content="3264"/);
+  assert.match(html, /name="twitter:card" content="summary_large_image"/);
+  assert.match(html, /name="twitter:image"[\s\S]*?tyrannosatan-social-preview\.jpg/);
+  assert.ok(socialPreview.size > 100_000);
 });
 
 test('content helpers sort, partition, and paginate without timezone drift', () => {
