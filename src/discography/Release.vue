@@ -4,9 +4,8 @@
       <router-link class="back-link" to="/discography">← All releases</router-link>
 
       <header class="release-header">
-        <p class="eyebrow">{{ release.year }} · {{ release.kind }}</p>
         <h1>{{ release.title }}</h1>
-        <p class="summary">{{ release.summary }}</p>
+        <p class="section-kicker">{{ release.detailKicker }}</p>
       </header>
 
       <div class="release-hero">
@@ -115,19 +114,6 @@ const release = computed(() => releaseBySlug(props.slug));
 .release { text-align: left; }
 .back-link { display: inline-block; margin: 0.5rem 0 1rem; }
 .release-header { text-align: center; }
-
-.eyebrow {
-  color: #9a8f88;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.summary {
-  font-size: 1.08rem;
-  margin: -0.25rem auto 2rem;
-  max-width: 52ch;
-}
 
 .release-hero {
   align-items: start;
