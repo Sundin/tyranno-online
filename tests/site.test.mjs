@@ -73,6 +73,9 @@ test('the homepage and about page divide the cemetery band photos', async () => 
   assert.doesNotMatch(about, /tyrannosatan-cemetery-portrait\.jpg/);
   assert.match(about, /tyrannosatan-cemetery-band\.jpg/);
   assert.doesNotMatch(about, /Tyrannosatan_Band\.jpg/);
+  assert.match(about, /deadly power trio hailing from Goatenburg, Sweden/);
+  assert.match(about, /ancient evil, forbidden magic, cosmic horror and war/);
+  assert.doesNotMatch(about, /plague-ridden island of Hisingen/);
 });
 
 test('the discography exposes all three release pages', async () => {
