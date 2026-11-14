@@ -26,9 +26,10 @@ test('content helpers sort, partition, and paginate without timezone drift', () 
 
 test('the core pages remain registered', async () => {
   const routes = await read('src/router.js');
-  for (const path of ['/', '/news', '/about', '/tour', '/merch']) {
+  for (const path of ['/', '/discography', '/discography/:slug', '/about', '/tour', '/merch']) {
     assert.match(routes, new RegExp(`path:\\s*['"]${path}['"]`), `missing route ${path}`);
   }
+  assert.match(routes, /path:\s*['"]\/news['"],\s*redirect:\s*['"]\/discography['"]/);
   assert.match(routes, /:\s*pathMatch\(\.\*\)\*/);
 });
 
@@ -60,14 +61,27 @@ test('news entries have valid required fields and dates', async () => {
   }
 });
 
-test('the discography includes the Babylons Skräck tape', async () => {
+test('the homepage and about page divide the cemetery band photos', async () => {
+  const home = await read('src/home/Home.vue');
   const about = await read('src/pages/About.vue');
-  assert.match(about, /2025: Babylons Skräck \(Tape\)/);
-});
-
-test('the about page uses the new cemetery band photos', async () => {
-  const about = await read('src/pages/About.vue');
-  assert.match(about, /tyrannosatan-cemetery-portrait\.jpg/);
+  assert.match(home, /tyrannosatan-cemetery-portrait\.jpg/);
+  assert.doesNotMatch(about, /tyrannosatan-cemetery-portrait\.jpg/);
   assert.match(about, /tyrannosatan-cemetery-band\.jpg/);
   assert.doesNotMatch(about, /Tyrannosatan_Band\.jpg/);
+});
+
+test('the discography exposes all three release pages', async () => {
+  const header = await read('src/components/Header.vue');
+  const data = await read('src/discography/releases.js');
+  const index = await read('src/discography/Discography.vue');
+  const detail = await read('src/discography/Release.vue');
+
+  assert.match(header, />Discography<\/v-link>/);
+  assert.doesNotMatch(header, />News<\/v-link>/);
+  for (const slug of ['babylons-skrack', 'katakombernas-kakofoni', 'triumvirat']) {
+    assert.match(data, new RegExp(`slug: ['"]${slug}['"]`));
+  }
+  assert.match(index, /release-grid/);
+  assert.match(detail, /Tracklist/);
+  assert.match(detail, /Lineup/);
 });

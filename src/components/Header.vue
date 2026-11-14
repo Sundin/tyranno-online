@@ -2,7 +2,7 @@
   <header class="header">
     <nav class="navbar" aria-label="Main navigation">
       <div class="links left">
-        <v-link href="/news">News</v-link>
+        <v-link href="/discography">Discography</v-link>
         <v-link href="/tour">Rituals</v-link>
       </div>
       <v-link class="brand" href="/" aria-label="Tyrannosatan home">
@@ -77,7 +77,8 @@ import VLink from './VLink.vue';
 
   .links {
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 0;
     justify-content: center;
   }
 
