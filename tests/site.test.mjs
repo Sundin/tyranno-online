@@ -85,3 +85,30 @@ test('the discography exposes all three release pages', async () => {
   assert.match(detail, /Tracklist/);
   assert.match(detail, /Lineup/);
 });
+
+test('the merch page links the first seven Tyrannosatan shop results', async () => {
+  const merch = await read('src/pages/Merch.vue');
+  const products = await read('src/merch/products.js');
+
+  assert.match(merch, /merch-grid/);
+  assert.match(merch, /Jawbreaker Records/);
+
+  const productPaths = [
+    'tyrannosatan-babylons-skrack-t-shirt',
+    'tyrannosatan-patch',
+    'tyrannosatan-babylons-skrack-cassette',
+    'tyrannosatan-pin',
+    'tyrannosatan-logo-t-shirt',
+    'tyrannosatan-katakombernas-kakofoni-lp',
+    'tyrannosatan-katakombernas-kakofoni-tape',
+  ];
+
+  let previousIndex = -1;
+  for (const path of productPaths) {
+    const index = products.indexOf(path);
+    assert.ok(index > previousIndex, `${path} should appear in shop-result order`);
+    previousIndex = index;
+  }
+  assert.doesNotMatch(products, /jawbreaking-news/);
+  assert.equal((products.match(/url: `\$\{shopBase\}/g) || []).length, 7);
+});
