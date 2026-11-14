@@ -78,6 +78,8 @@ test('the homepage and about page divide the cemetery band photos', async () => 
   assert.match(about, /deadly power trio hailing from Goatenburg, Sweden/);
   assert.match(about, /ancient evil, forbidden magic, cosmic horror and war/);
   assert.match(about, /<h1>Members<\/h1>/);
+  assert.match(about, /Nattsvart – Guitars & Hellish Howls/);
+  assert.doesNotMatch(about, /G\.G\. Nattsvart/);
   assert.match(about, /Pestgam – Drums of Doom &amp; Gruesome Growls/);
   assert.doesNotMatch(about, /<h1>Lineup<\/h1>/);
   assert.doesNotMatch(about, /plague-ridden island of Hisingen/);
@@ -99,13 +101,14 @@ test('the discography exposes all three release pages', async () => {
   assert.doesNotMatch(data, /formats: ['"]Digital['"]/);
   for (const member of [
     'Isfall – Thunder Bass & Sinister Snarling',
-    'G.G. Nattsvart – Guitars & Hellish Howls',
+    'Nattsvart – Guitars & Hellish Howls',
     'Pestgam – Drums of Doom & Gruesome Growls',
     'Slirhammer – Drums of Doom',
   ]) {
     assert.match(data, new RegExp(member.replaceAll('.', '\\.')));
   }
   assert.doesNotMatch(data, /(?:bass|guitars|drums) & vocals|Slirhammer — drums/i);
+  assert.doesNotMatch(data, /G\.G\. Nattsvart/);
   assert.match(data, /A lawless approach to mid-to-late 80’s underground extreme \(and traditional\) heavy metal spiritus\./);
   assert.match(data, /cite: ['"]Mystification Zine['"]/);
   for (const review of [
