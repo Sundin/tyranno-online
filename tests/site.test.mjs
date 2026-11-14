@@ -77,6 +77,9 @@ test('the homepage and about page divide the cemetery band photos', async () => 
   assert.doesNotMatch(about, /Tyrannosatan_Band\.jpg/);
   assert.match(about, /deadly power trio hailing from Goatenburg, Sweden/);
   assert.match(about, /ancient evil, forbidden magic, cosmic horror and war/);
+  assert.match(about, /<h1>Members<\/h1>/);
+  assert.match(about, /Pestgam – Drums of Doom &amp; Gruesome Growls/);
+  assert.doesNotMatch(about, /<h1>Lineup<\/h1>/);
   assert.doesNotMatch(about, /plague-ridden island of Hisingen/);
 });
 
