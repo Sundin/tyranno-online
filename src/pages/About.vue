@@ -3,8 +3,11 @@
     <h1>About Tyrannosatan</h1>
 
     <p>
-      Tyrannosatan was formed on the plague-ridden island of Hisingen, Sweden a few years back.
-      The core idea was, and is, to play heavy metal directly from the heart.
+      Tyrannosatan is a deadly power trio hailing from Goatenburg, Sweden. Their music is
+      authentic and true metal, with influences ranging across black, speed, thrash, death, doom
+      and traditional heavy metal – sprinkled with doses of Scandinavian folk music, kraut and
+      psychadelic rock. All the lyrics are sung in their native Swedish mother tongue and revolve
+      around ancient evil, forbidden magic, cosmic horror and war.
     </p>
 
     <h1>Lineup</h1>
