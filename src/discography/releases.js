@@ -27,7 +27,7 @@ export const releases = [
     ],
     lineup: [
       'Isfall – Thunder Bass & Sinister Snarling',
-      'G.G. Nattsvart – Guitars & Hellish Howls',
+      'Nattsvart – Guitars & Hellish Howls',
       'Pestgam – Drums of Doom & Gruesome Growls',
     ],
     credits: ['Layout by Turborock Productions'],
@@ -76,7 +76,7 @@ export const releases = [
     ],
     lineup: [
       'Isfall – Thunder Bass & Sinister Snarling',
-      'G.G. Nattsvart – Guitars & Hellish Howls',
+      'Nattsvart – Guitars & Hellish Howls',
       'Slirhammer – Drums of Doom',
     ],
     credits: [
@@ -124,7 +124,7 @@ export const releases = [
     ],
     lineup: [
       'Isfall – Thunder Bass & Sinister Snarling',
-      'G.G. Nattsvart – Guitars & Hellish Howls',
+      'Nattsvart – Guitars & Hellish Howls',
       'Slirhammer – Drums of Doom',
     ],
     credits: [

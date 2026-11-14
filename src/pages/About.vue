@@ -13,7 +13,7 @@
     <h1>Members</h1>
 
     <p>Isfall – Thunder Bass & Sinister Snarling</p>
-    <p>G.G. Nattsvart – Guitars & Hellish Howls</p>
+    <p>Nattsvart – Guitars & Hellish Howls</p>
     <p>Pestgam – Drums of Doom &amp; Gruesome Growls</p>
 
     <p>
