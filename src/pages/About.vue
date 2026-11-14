@@ -13,22 +13,6 @@
     <p>G.G. Nattsvart – Guitars & Hellish Howls</p>
     <p>Pestgam – Drums of Doom</p>
 
-    <h1>Discography</h1>
-    <p>2025: Babylons Skräck (Tape)</p>
-    <p><b>2021: Katakombernas Kakofoni</b></p>
-    <p>2017: Triumvirat (Rehearsal Demo)</p>
-
-
-    <p>
-      <img
-        alt="Tyrannosatan posed before a cemetery monument"
-        decoding="async"
-        height="4896"
-        loading="lazy"
-        src="../assets/tyrannosatan-cemetery-portrait.jpg"
-        width="3264"
-      />
-    </p>
     <p>
       <img
         alt="Tyrannosatan standing outside a cemetery mausoleum"
