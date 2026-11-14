@@ -89,6 +89,7 @@ export const releases = [
       { quote: 'Your band sounds good, a mix of styles in a METAL way!', cite: 'Jorge / Mina de Aço, Portugal' },
       { quote: 'Unrelenting blackened death thrash!!', cite: 'Chris, Mercenary Press / Inhuman Nature, UK', url: 'https://mercenarypress.bandcamp.com/' },
       { quote: 'Tyrannosatan know how to rock hard, connecting to your reptile brain and making your head pump and your pulse pound.', cite: 'No Clean Singing', url: 'https://www.nocleansinging.com/2022/08/15/seen-and-heard-aphonic-threnody-tyrannosatan-ammanas/' },
+      { quote: 'A lawless approach to mid-to-late 80’s underground extreme (and traditional) heavy metal spiritus.', cite: 'Mystification Zine' },
     ],
     sources: [
       { label: 'Bandcamp', url: 'https://tyrannosatan.bandcamp.com/album/katakombernas-kakofoni' },
