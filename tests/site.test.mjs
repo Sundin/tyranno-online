@@ -92,11 +92,20 @@ test('the discography exposes all three release pages', async () => {
   for (const slug of ['babylons-skrack', 'katakombernas-kakofoni', 'triumvirat']) {
     assert.match(data, new RegExp(`slug: ['"]${slug}['"]`));
   }
+  for (const kicker of [
+    '2025 · 4 song cassette tape',
+    "2022 · Tyrannosatan's ripping debut LP.",
+    '2017 · Rehearsal demo',
+  ]) {
+    assert.match(data, new RegExp(`detailKicker: ['"]${kicker.replace('.', '\\.')}['"]`));
+  }
   assert.match(index, /release-grid/);
   assert.match(index, /class="section-kicker">Recorded rituals · 2017–2025<\/p>/);
   assert.doesNotMatch(index, /Three transmissions of howling heavy metal fury/);
   assert.match(detail, /Tracklist/);
   assert.match(detail, /Lineup/);
+  assert.match(detail, /class="section-kicker">\{\{ release\.detailKicker \}\}<\/p>/);
+  assert.doesNotMatch(detail, /release\.year \}\} · \{\{ release\.kind/);
 });
 
 test('the merch page links the first seven Tyrannosatan shop results', async () => {
