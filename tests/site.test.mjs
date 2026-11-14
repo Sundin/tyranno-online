@@ -39,6 +39,8 @@ test('the rituals page includes the recent festival history', async () => {
 
   assert.match(tour, /Upcoming Rituals/);
   assert.match(tour, /Past Rituals/);
+  assert.match(tour, /class="section-kicker">No rituals announced\.<\/p>/);
+  assert.doesNotMatch(tour, /Watch this space/);
   assert.match(header, />Rituals<\/v-link>/);
   for (const [date, festival] of [
     ['2026-05-28', 'Muskelrock'],
@@ -91,6 +93,8 @@ test('the discography exposes all three release pages', async () => {
     assert.match(data, new RegExp(`slug: ['"]${slug}['"]`));
   }
   assert.match(index, /release-grid/);
+  assert.match(index, /class="section-kicker">Recorded rituals · 2017–2025<\/p>/);
+  assert.doesNotMatch(index, /Three transmissions of howling heavy metal fury/);
   assert.match(detail, /Tracklist/);
   assert.match(detail, /Lineup/);
 });
@@ -98,9 +102,16 @@ test('the discography exposes all three release pages', async () => {
 test('the merch page links the first seven Tyrannosatan shop results', async () => {
   const merch = await read('src/pages/Merch.vue');
   const products = await read('src/merch/products.js');
+  const layout = await read('src/layouts/Main.vue');
 
   assert.match(merch, /merch-grid/);
   assert.match(merch, /Jawbreaker Records/);
+  assert.match(
+    merch,
+    /class="section-kicker">Selected artifacts from Jawbreaker Records\.<\/p>/,
+  );
+  assert.match(layout, /\.section-kicker\s*\{[\s\S]*?color: #9a8f88;/);
+  assert.match(layout, /\.section-kicker\s*\{[\s\S]*?text-transform: uppercase;/);
 
   const productPaths = [
     'tyrannosatan-babylons-skrack-t-shirt',
