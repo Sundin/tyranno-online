@@ -106,6 +106,8 @@ test('the discography exposes all three release pages', async () => {
     assert.match(data, new RegExp(member.replaceAll('.', '\\.')));
   }
   assert.doesNotMatch(data, /(?:bass|guitars|drums) & vocals|Slirhammer — drums/i);
+  assert.match(data, /A lawless approach to mid-to-late 80’s underground extreme \(and traditional\) heavy metal spiritus\./);
+  assert.match(data, /cite: ['"]Mystification Zine['"]/);
   for (const kicker of [
     '2025 · 4 song cassette tape',
     "2022 · Tyrannosatan's ripping debut LP.",
