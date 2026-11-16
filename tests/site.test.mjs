@@ -179,3 +179,27 @@ test('the merch page links the first seven Tyrannosatan shop results', async () 
   assert.doesNotMatch(products, /jawbreaking-news/);
   assert.equal((products.match(/url: `\$\{shopBase\}/g) || []).length, 7);
 });
+
+
+test('build emits static, URL-specific metadata for discography and release pages', async () => {
+  const { execFile } = await import('node:child_process');
+  const { promisify } = await import('node:util');
+  await promisify(execFile)('npm', ['run', 'build'], { cwd: new URL('..', import.meta.url) });
+
+  for (const [path, title, description] of [
+    ['/discography', 'Tyrannosatan — Discography', 'Recorded rituals from Tyrannosatan'],
+    ['/discography/babylons-skrack', 'Babylons Skräck — Tyrannosatan', 'A venomous strike'],
+    ['/discography/katakombernas-kakofoni', 'Katakombernas Kakofoni — Tyrannosatan', 'A furious attack'],
+    ['/discography/triumvirat', 'Triumvirat — Tyrannosatan', 'The independent debut demo'],
+  ]) {
+    const html = await read(`dist${path}/index.html`);
+    const url = `https://www.tyrannosatan.se${path}`;
+
+    assert.ok(html.includes(`<title>${title}</title>`), path);
+    assert.ok(html.includes(`<link rel="canonical" href="${url}"`), path);
+    assert.ok(html.includes(`property="og:url" content="${url}"`), path);
+    assert.ok(html.includes(`property="og:title" content="${title}"`), path);
+    assert.ok(html.includes(`name="twitter:title" content="${title}"`), path);
+    assert.ok(html.includes(description), path);
+  }
+});
